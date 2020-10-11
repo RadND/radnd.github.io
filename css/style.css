@@ -308,7 +308,7 @@ body {
   font-weight: bold;
 }
 #header {
-  height: 300px;
+  height: 420px;
   position: relative;
   border-bottom: 1px solid #ddd;
 }
@@ -365,9 +365,9 @@ body {
 #logo,
 #subtitle {
   text-decoration: none;
-  color: #fff;
-  font-weight: 300;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  color: rgba(0,0,0,0.83);
+  font-weight: bold;
+  text-shadow: 0 1px 4px rgba(255,255,255,0.42);
 }
 #logo {
   font-size: 40px;
@@ -390,7 +390,8 @@ body {
 .main-nav-link {
   float: left;
   color: #fff;
-  opacity: 0.6;
+  opacity: 0.8;
+/**https://imgchr.com/i/0gEDPg**/
   text-decoration: none;
   text-shadow: 0 1px rgba(0,0,0,0.2);
   -webkit-transition: opacity 0.2s;
@@ -415,7 +416,7 @@ body {
   cursor: pointer;
 }
 .main-nav-link {
-  font-weight: 300;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 @media screen and (max-width: 479px) {
