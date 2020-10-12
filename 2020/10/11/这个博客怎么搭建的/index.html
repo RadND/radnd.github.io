@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>这个博客怎么搭建的 | 一〇五曲柄中的雨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="大致步骤本来想着 gayhub 上的静态博客不是都好几年了么，连程序都有三四个，结果还是叫我碰到不少坑，在这里记一下，安装过程网上到处都有，我就不复读了，只列一个简单的列表  装 node  装 git  装 hexo  注册 github  添加 ssh 公钥  创建 &lt;username&gt;.github.io 仓库，设置一堆选项  ———— 可选 ————  购买域名  设置仓库的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="这个博客怎么搭建的">
+<meta property="og:url" content="http://example.com/2020/10/11/%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%80%8E%E4%B9%88%E6%90%AD%E5%BB%BA%E7%9A%84/index.html">
+<meta property="og:site_name" content="一〇五曲柄中的雨">
+<meta property="og:description" content="大致步骤本来想着 gayhub 上的静态博客不是都好几年了么，连程序都有三四个，结果还是叫我碰到不少坑，在这里记一下，安装过程网上到处都有，我就不复读了，只列一个简单的列表  装 node  装 git  装 hexo  注册 github  添加 ssh 公钥  创建 &lt;username&gt;.github.io 仓库，设置一堆选项  ———— 可选 ————  购买域名  设置仓库的">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-10-11T15:03:46.000Z">
+<meta property="article:modified_time" content="2020-10-12T04:49:18.152Z">
+<meta property="article:author" content="Rad 面">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="一〇五曲柄中的雨" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">一〇五曲柄中的雨</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">主标题没有什么意义</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/bio">Bio</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-这个博客怎么搭建的" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/10/11/%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%80%8E%E4%B9%88%E6%90%AD%E5%BB%BA%E7%9A%84/" class="article-date">
+  <time class="dt-published" datetime="2020-10-11T15:03:46.000Z" itemprop="datePublished">2020-10-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      这个博客怎么搭建的
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="大致步骤"><a href="#大致步骤" class="headerlink" title="大致步骤"></a>大致步骤</h2><p>本来想着 gayhub 上的静态博客不是都好几年了么，连程序都有三四个，结果还是叫我碰到不少坑，在这里记一下，安装过程网上到处都有，我就不复读了，只列一个简单的列表</p>
+<ol>
+<li><p>装 node</p>
+</li>
+<li><p>装 git</p>
+</li>
+<li><p>装 hexo</p>
+</li>
+<li><p>注册 github</p>
+</li>
+<li><p>添加 ssh 公钥</p>
+</li>
+<li><p>创建 &lt;username&gt;.github.io 仓库，设置一堆选项</p>
+</li>
+<li><p>———— 可选 ————</p>
+</li>
+<li><p>购买域名</p>
+</li>
+<li><p>设置仓库的 custom domain</p>
+</li>
+<li><p>添加/更改 域名的 DNS CNAME 记录</p>
+</li>
+<li><p>———— 可选 ————</p>
+</li>
+<li><p>我是如何学会停止焦虑并爱上写作的</p>
+</li>
+</ol>
+<h2 id="装-Hexo"><a href="#装-Hexo" class="headerlink" title="装 Hexo"></a>装 Hexo</h2><p>装 Hexo 的时候会有一个默认主题 Landscape 。可能是由于我的 node 不是最新的，这个默认主题不是最新版本的，不知道具体多老，反正很老，甚至不能配置 banner 。最好还是刚装完就从 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-theme-landscape">这个仓库</a> 克隆再覆盖一下</p>
+<h2 id="添加-ssh-公钥"><a href="#添加-ssh-公钥" class="headerlink" title="添加 ssh 公钥"></a>添加 ssh 公钥</h2><p>我遇到了两个麻烦</p>
+<ul>
+<li><p>tortoisegit 用的是 ppk 格式的密钥，它不会自动把对应的 openssh 格式的密钥放到 <code>/.ssh/</code> 里面去，所以要自己<a target="_blank" rel="noopener" href="https://www.cnblogs.com/5201351/p/13055631.html">转换</a>和<a target="_blank" rel="noopener" href="https://www.cnblogs.com/beeasy/p/6066466.html">添加</a></p>
+</li>
+<li><p>我在 gayhub 和 gaytee(coding?) 上用的是两个不同的密钥，所以还需要针对Git多账户<a target="_blank" rel="noopener" href="https://www.cnblogs.com/popfisher/p/5731232.html">专门做处理</a></p>
+</li>
+</ul>
+<h2 id="设置仓库的-custom-domain"><a href="#设置仓库的-custom-domain" class="headerlink" title="设置仓库的 custom domain"></a>设置仓库的 custom domain</h2><p>这个动作其实是是替你在仓库根目录里提交了一个 CNAME 文件，hexo 只会从本地库推送，不会从远程库拉取，所以下一次 <code>hexo d</code> 的时候这个 CNAME 文件肯定就被覆盖了，所以得把 CNAME 复制一份放到 <code>source/</code> 目录里</p>
+<p>按照 <a target="_blank" rel="noopener" href="https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#about-custom-domain-configuration">GitHub Docs</a> 所述，有必要先进行这一步，再配置 DNS 的 CNAME 记录</p>
+<h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>我是从 <a target="_blank" rel="noopener" href="https://www.namesilo.com/">namesilo</a> 买的域名，如果你也想从这里买，可以用我的优惠码 <code>train</code>，应该能便宜 1 美元（有效期到元旦）</p>
+<h2 id="CNAME"><a href="#CNAME" class="headerlink" title="CNAME"></a>CNAME</h2><p>CNAME 记录只能给三级子域名（就是我这样的 <code>log.trainrestriction.top</code>）用，如果想用二级域名（形如 <code>trainrestriction.top</code>）做自定义域名，就得用 A 记录，教程在<a target="_blank" rel="noopener" href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain">GitHub Docs</a></p>
+<h2 id="https"><a href="#https" class="headerlink" title="https"></a>https</h2><p>没有 CNAME 文件时自定义域名不能用 https</p>
+<h2 id="大小写（不）敏感"><a href="#大小写（不）敏感" class="headerlink" title="大小写（不）敏感"></a>大小写（不）敏感</h2><p>git 默认大小写不敏感，但 GitHub page 大小写敏感，访问链接的时候可能会出问题，新建 pages 的时候一定要注意，我的那个 Bio 页面就是这种情况，文件夹名是 <code>Bio</code>，访问路径是 <code>/bio</code>，毫无疑问的 404 了</p>
+<h2 id="Postscript"><a href="#Postscript" class="headerlink" title="Postscript"></a>Postscript</h2><p>未来我还打算给博客添加博客功能，可能是另一篇文章了，如果不很复杂就写在这里</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/11/%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%80%8E%E4%B9%88%E6%90%AD%E5%BB%BA%E7%9A%84/" data-id="ckg61u21q0000lsu74f4e6qr0" data-title="这个博客怎么搭建的" class="article-share-link">Teilen</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/10/09/%E5%85%89%E7%9B%98%E8%A1%8C%E5%8A%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">光盘行动</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/10/11/%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%80%8E%E4%B9%88%E6%90%AD%E5%BB%BA%E7%9A%84/">这个博客怎么搭建的</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/09/%E5%85%89%E7%9B%98%E8%A1%8C%E5%8A%A8/">光盘行动</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/08/%E5%86%99%E5%8D%9A%E5%AE%A2/">写博客</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/07/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2020 Rad 面<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/bio" class="mobile-nav-link">Bio</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
