@@ -651,7 +651,8 @@ a.article-title:hover {
   margin-right: 0.5em;
   margin-left: 1em;
 }
-.article-entry .caption {
+.article-entry .caption,
+.article-entry figcaption {
   color: #999;
   display: block;
   font-size: 0.9em;
