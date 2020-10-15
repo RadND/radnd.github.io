@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-10-15T05:38:10.825Z</updated>
+  <updated>2020-10-15T12:27:20.953Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新标签页扩展</title>
+    <link href="http://example.com/2020/10/%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5%E6%89%A9%E5%B1%95/"/>
+    <id>http://example.com/2020/10/%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5%E6%89%A9%E5%B1%95/</id>
+    <published>2020-10-15T07:53:11.000Z</published>
+    <updated>2020-10-15T12:27:20.953Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;火狐自带的新标签页很不错，但是我想看 bing.com 的壁纸，理想中的新标签页和 bing 首页差不多，但&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;壁纸还得有&lt;/li&gt;
+&lt;li&gt;底部没有这么多推送，取而代之的是我的常访问网站，也就是自带新标签页的 Top Sites&lt;/li&gt;
+&lt;li&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hold E to pull up {name}</title>
@@ -67,24 +89,6 @@
       
     <summary type="html">&lt;h2 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h2&gt;&lt;p&gt;有朋友问我这个昵称有什么说法，我是觉得很有意思（以至于域名都租的这个），这四个字可以有很多种解释方法，而且都很合理&lt;/p&gt;
 &lt;p&gt;也许火车的</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>这个博客怎么搭建的</title>
-    <link href="http://example.com/2020/10/%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%80%8E%E4%B9%88%E6%90%AD%E5%BB%BA%E7%9A%84/"/>
-    <id>http://example.com/2020/10/%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%80%8E%E4%B9%88%E6%90%AD%E5%BB%BA%E7%9A%84/</id>
-    <published>2020-10-11T15:03:46.000Z</published>
-    <updated>2020-10-12T04:49:18.152Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;大致步骤&quot;&gt;&lt;a href=&quot;#大致步骤&quot; class=&quot;headerlink&quot; title=&quot;大致步骤&quot;&gt;&lt;/a&gt;大致步骤&lt;/h2&gt;&lt;p&gt;本来想着 gayhub 上的静态博客不是都好几年了么，连程序都有三四个，结果还是叫我碰到不少坑，在这里记一下，安装过程网上到</summary>
       
     
     
