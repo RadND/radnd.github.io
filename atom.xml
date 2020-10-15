@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-10-14T11:01:28.028Z</updated>
+  <updated>2020-10-15T05:38:10.825Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,17 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>对我们招新的一点见解</title>
-    <link href="http://example.com/2020/10/%E5%AF%B9%E6%88%91%E4%BB%AC%E6%8B%9B%E6%96%B0%E7%9A%84%E4%B8%80%E7%82%B9%E8%A7%81%E8%A7%A3/"/>
-    <id>http://example.com/2020/10/%E5%AF%B9%E6%88%91%E4%BB%AC%E6%8B%9B%E6%96%B0%E7%9A%84%E4%B8%80%E7%82%B9%E8%A7%81%E8%A7%A3/</id>
+    <title>Hold E to pull up {name}</title>
+    <link href="http://example.com/2020/10/Hold%20E%20to%20pull%20up%20%7Bname%7D/"/>
+    <id>http://example.com/2020/10/Hold%20E%20to%20pull%20up%20%7Bname%7D/</id>
     <published>2020-10-14T03:14:58.000Z</published>
-    <updated>2020-10-14T11:01:28.028Z</updated>
+    <updated>2020-10-15T05:38:10.825Z</updated>
     
     
       
       
-    <summary type="html">&lt;blockquote&gt;&lt;p&gt;People sleep peacably in their beds at night only because rough men stand ready to do violence on their behalf.&lt;/p&gt;
-&lt;footer&gt;&lt;</summary>
+    <summary type="html">&lt;p&gt;招新。&lt;/p&gt;
+&lt;p&gt;有些人不看群公告，有些人问一些懂得百度的用法就可以不用在群里问的问题，让我很不爽，我觉得有这两种行为的人没救了。（1）&lt;/p&gt;
+&lt;p&gt;还有一些人，填错了报名表上的联系方式，该填邮箱的地方填了一个 qq 号，或者是个手机号，或者只是瞎填的，我没时间去试验</summary>
       
     
     
