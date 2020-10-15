@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>一〇五曲柄中的雨</title>
+  
+  <subtitle>主标题没有什么意义</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2020-10-14T11:01:28.028Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Rad 面</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>对我们招新的一点见解</title>
+    <link href="http://example.com/2020/10/%E5%AF%B9%E6%88%91%E4%BB%AC%E6%8B%9B%E6%96%B0%E7%9A%84%E4%B8%80%E7%82%B9%E8%A7%81%E8%A7%A3/"/>
+    <id>http://example.com/2020/10/%E5%AF%B9%E6%88%91%E4%BB%AC%E6%8B%9B%E6%96%B0%E7%9A%84%E4%B8%80%E7%82%B9%E8%A7%81%E8%A7%A3/</id>
+    <published>2020-10-14T03:14:58.000Z</published>
+    <updated>2020-10-14T11:01:28.028Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;&lt;p&gt;People sleep peacably in their beds at night only because rough men stand ready to do violence on their behalf.&lt;/p&gt;
+&lt;footer&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>下午两点过五分到两点半的树阴</title>
+    <link href="http://example.com/2020/10/%E4%B8%8B%E5%8D%88%E4%B8%A4%E7%82%B9%E8%BF%87%E4%BA%94%E5%88%86%E5%88%B0%E4%B8%A4%E7%82%B9%E5%8D%8A%E7%9A%84%E6%A0%91%E9%98%B4/"/>
+    <id>http://example.com/2020/10/%E4%B8%8B%E5%8D%88%E4%B8%A4%E7%82%B9%E8%BF%87%E4%BA%94%E5%88%86%E5%88%B0%E4%B8%A4%E7%82%B9%E5%8D%8A%E7%9A%84%E6%A0%91%E9%98%B4/</id>
+    <published>2020-10-13T13:43:56.000Z</published>
+    <updated>2020-10-14T03:16:42.318Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这篇短文主要发表了对学校基建的负面意见，所以不只是植树计划的问题，不过每当我去上下午第一节课的时候，植树计划的问题确实是最大的问题&lt;/p&gt;
+&lt;p&gt;桂林的天气像个布尔值，如果东南沿海地区没有刮台风，天气就是特别毒辣的太阳，如果刮台风，天气就是以短暂的阴天为间隔的大雨，如果钻牛</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>🔥車阝艮彳亍</title>
+    <link href="http://example.com/2020/10/%F0%9F%94%A5%E8%BB%8A%E9%98%9D%E8%89%AE%E5%BD%B3%E4%BA%8D/"/>
+    <id>http://example.com/2020/10/%F0%9F%94%A5%E8%BB%8A%E9%98%9D%E8%89%AE%E5%BD%B3%E4%BA%8D/</id>
+    <published>2020-10-12T06:12:24.000Z</published>
+    <updated>2020-10-13T04:58:13.283Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h2&gt;&lt;p&gt;有朋友问我这个昵称有什么说法，我是觉得很有意思（以至于域名都租的这个），这四个字可以有很多种解释方法，而且都很合理&lt;/p&gt;
+&lt;p&gt;也许火车的</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>这个博客怎么搭建的</title>
+    <link href="http://example.com/2020/10/%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%80%8E%E4%B9%88%E6%90%AD%E5%BB%BA%E7%9A%84/"/>
+    <id>http://example.com/2020/10/%E8%BF%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%80%8E%E4%B9%88%E6%90%AD%E5%BB%BA%E7%9A%84/</id>
+    <published>2020-10-11T15:03:46.000Z</published>
+    <updated>2020-10-12T04:49:18.152Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;大致步骤&quot;&gt;&lt;a href=&quot;#大致步骤&quot; class=&quot;headerlink&quot; title=&quot;大致步骤&quot;&gt;&lt;/a&gt;大致步骤&lt;/h2&gt;&lt;p&gt;本来想着 gayhub 上的静态博客不是都好几年了么，连程序都有三四个，结果还是叫我碰到不少坑，在这里记一下，安装过程网上到</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
