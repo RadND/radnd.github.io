@@ -3,11 +3,11 @@
   <title>一〇五曲柄中的雨</title>
   
   <subtitle>主标题没有什么意义</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://example.com/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2020-10-18T11:01:47.384Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://example.com/"/>
+  <updated>2020-10-18T11:08:43.485Z</updated>
+  <id>https://example.com/</id>
   
   <author>
     <name>Rad 面</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>开评论</title>
-    <link href="http://example.com/2020/10/17/"/>
-    <id>http://example.com/2020/10/17/</id>
+    <link href="https://example.com/2020/10/17/"/>
+    <id>https://example.com/2020/10/17/</id>
     <published>2020-10-17T15:40:11.000Z</published>
-    <updated>2020-10-18T11:01:47.384Z</updated>
+    <updated>2020-10-18T11:08:43.485Z</updated>
     
     
       
@@ -36,8 +36,8 @@
   
   <entry>
     <title>惊天雷</title>
-    <link href="http://example.com/2020/10/16/"/>
-    <id>http://example.com/2020/10/16/</id>
+    <link href="https://example.com/2020/10/16/"/>
+    <id>https://example.com/2020/10/16/</id>
     <published>2020-10-16T04:37:01.000Z</published>
     <updated>2020-10-16T13:02:27.853Z</updated>
     
@@ -55,8 +55,8 @@
   
   <entry>
     <title>新标签页扩展</title>
-    <link href="http://example.com/2020/10/15/"/>
-    <id>http://example.com/2020/10/15/</id>
+    <link href="https://example.com/2020/10/15/"/>
+    <id>https://example.com/2020/10/15/</id>
     <published>2020-10-15T07:53:11.000Z</published>
     <updated>2020-10-16T07:22:56.480Z</updated>
     
@@ -77,8 +77,8 @@
   
   <entry>
     <title>Hold E to pull up {name}</title>
-    <link href="http://example.com/2020/10/14/"/>
-    <id>http://example.com/2020/10/14/</id>
+    <link href="https://example.com/2020/10/14/"/>
+    <id>https://example.com/2020/10/14/</id>
     <published>2020-10-14T03:14:58.000Z</published>
     <updated>2020-10-16T04:33:31.022Z</updated>
     
