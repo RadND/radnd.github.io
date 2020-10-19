@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2020-10-18T11:08:43.485Z</updated>
+  <updated>2020-10-19T15:06:32.315Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -17,16 +17,54 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>找零货币问题</title>
+    <link href="https://example.com/2020/10/19/"/>
+    <id>https://example.com/2020/10/19/</id>
+    <published>2020-10-19T14:55:17.000Z</published>
+    <updated>2020-10-19T15:06:32.315Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;&lt;p&gt;在美国，就像在大多数国家一样，给任何总数的零钱最好的方法是使用一个贪婪的策略——找到面额最大但少于总数的硬币，给其中一个，然后重复。例如，在美国，支付给一个人 97 美分的现金，照此策略 会得出找零 50*1 + 25*1 + 5*2 + 1*2 的</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>程序员必看纪录片</title>
+    <link href="https://example.com/2020/10/18/"/>
+    <id>https://example.com/2020/10/18/</id>
+    <published>2020-10-18T14:21:00.000Z</published>
+    <updated>2020-10-19T05:50:42.956Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这个标题有歧义&lt;/p&gt;
+&lt;p&gt;想看纪录片了，好奇有哪些关于从 0 开始数数的世界的纪录片，搜了搜，发现有一篇「10部程序员必看的纪录片」的文章在第一页搜索结果中占了多数席，打算先从这 10 部里挑些有趣的看看，其余类似主题的也放在这里&lt;/p&gt;
+&lt;h2 id=&quot;现代生活的秘密</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>开评论</title>
     <link href="https://example.com/2020/10/17/"/>
     <id>https://example.com/2020/10/17/</id>
     <published>2020-10-17T15:40:11.000Z</published>
-    <updated>2020-10-18T11:08:43.485Z</updated>
+    <updated>2020-10-19T05:53:14.058Z</updated>
     
     
       
       
-    <summary type="html">&lt;p&gt;在各个给静态网站提供评论功能的解决方案里面翻来翻去，有朋友建议我用 Disqus ，但是这个服务已经被墙了，我不可能只和程序员做朋友，所以选一个没有被墙的服务比较好，但用国内的服务又得来一遍 手机号实名备案 三连，干脆跳过不考虑。最后发现一个叫 gitalk 的，可以用 i</summary>
+    <summary type="html">&lt;h2 id=&quot;挑选&quot;&gt;&lt;a href=&quot;#挑选&quot; class=&quot;headerlink&quot; title=&quot;挑选&quot;&gt;&lt;/a&gt;挑选&lt;/h2&gt;&lt;p&gt;在各个给静态网站提供评论功能的解决方案里面翻来翻去，有朋友建议我用 Disqus ，但是这个服务已经被墙了，我不可能只和程序员做朋友，所以选</summary>
       
     
     
@@ -39,55 +77,13 @@
     <link href="https://example.com/2020/10/16/"/>
     <id>https://example.com/2020/10/16/</id>
     <published>2020-10-16T04:37:01.000Z</published>
-    <updated>2020-10-16T13:02:27.853Z</updated>
+    <updated>2020-10-19T05:58:49.258Z</updated>
     
     
       
       
     <summary type="html">&lt;p&gt;是否要讨论&lt;del&gt;科学&lt;/del&gt;技术是不是一把双刃剑呢？今天就算了&lt;/p&gt;
 &lt;p&gt;56 年前的今天，中国第一颗原子弹爆炸成功，我想借此机会推销一下这首歌 China’s first atomic bomb test:&lt;a href=&quot;https://www.youtub</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>新标签页扩展</title>
-    <link href="https://example.com/2020/10/15/"/>
-    <id>https://example.com/2020/10/15/</id>
-    <published>2020-10-15T07:53:11.000Z</published>
-    <updated>2020-10-16T07:22:56.480Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;火狐自带的新标签页很不错，但是我想看 bing.com 的壁纸，理想中的新标签页和 bing 首页差不多，但&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;壁纸还得有&lt;/li&gt;
-&lt;li&gt;底部没有这么多推送，取而代之的是我的常访问网站，也就是自带新标签页的 Top Sites&lt;/li&gt;
-&lt;li&gt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hold E to pull up {name}</title>
-    <link href="https://example.com/2020/10/14/"/>
-    <id>https://example.com/2020/10/14/</id>
-    <published>2020-10-14T03:14:58.000Z</published>
-    <updated>2020-10-16T04:33:31.022Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;招新。&lt;/p&gt;
-&lt;p&gt;有些人不看群公告，有些人问一些懂得百度的用法就可以不用在群里问的问题，让我很不爽，我觉得有这两种行为的人没救了。（1）&lt;/p&gt;
-&lt;p&gt;还有一些人，填错了报名表上的联系方式，该填邮箱的地方填了一个 qq 号，或者是个手机号，或者只是瞎填的，我没时间去试验</summary>
       
     
     
