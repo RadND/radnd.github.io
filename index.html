@@ -101,8 +101,11 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <blockquote><p>在美国，就像在大多数国家一样，给任何总数的零钱最好的方法是使用一个贪婪的策略——找到面额最大但少于总数的硬币，给其中一个，然后重复。例如，在美国，支付给一个人 97 美分的现金，照此策略 会得出找零 50*1 + 25*1 + 5*2 + 1*2 的方法给出的硬币总数最少<br>然而，也有可能出现这种贪婪策略并不总是适用的硬币系统。例如，在一个奇怪的国家里，居民们出于某种奇怪的原因，决定使用 1、12、14、63 的面值。假设你需要返还 24 美分。最好的方法是返还 2 枚 12 美分的硬币。然而，在贪心策略下，总是选择面额小于总数的最大硬币，你会选择一个 14 美分的硬币和 10 个 1 美分的硬币，总共是 15 美分。</p>
+        <blockquote><p>在美国，就像在大多数国家一样，给任何总数的零钱最好的方法是使用一个贪婪的策略——找到面额最大但少于总数的硬币，给其中一个，然后重复。例如，在美国，支付给一个人 97 美分的现金，照此策略 会得出找零 50*1 + 25*1 + 5*2 + 1*2 的方法给出的硬币总数最少</p>
+<p>然而，也有可能出现这种贪婪策略并不总是适用的硬币系统。例如，在一个奇怪的国家里，居民们出于某种奇怪的原因，决定使用 1、12、14、63 的面值。假设你需要返还 24 美分。最好的方法是返还 2 枚 12 美分的硬币。然而，在贪心策略下，总是选择面额小于总数的最大硬币，你会选择一个 14 美分的硬币和 10 个 1 美分的硬币，总共是 15 美分。</p>
 <footer><strong>Serence</strong><cite><a target="_blank" rel="noopener" href="https://blog.blinkstar.cn/post/yi-wen-nong-dong-di-guia">一文弄懂递归</a></cite></footer></blockquote>
+
+<p>我有个疑问：在货币面值满足哪些条件的时候，贪心法总是能得到硬币数量最少的一种方案？</p>
 
       
     </div>
@@ -192,11 +195,11 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="挑选"><a href="#挑选" class="headerlink" title="挑选"></a>挑选</h2><p>在各个给静态网站提供评论功能的解决方案里面翻来翻去，有朋友建议我用 Disqus ，但是这个服务已经被墙了，我不可能只和程序员做朋友，所以选一个没有被墙的服务比较好，但用国内的服务又得来一遍 手机号实名备案 三连，干脆跳过不考虑。最后发现一个叫 gitalk 的，可以用 issue 当评论区用，就打算用这个了。</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>这个<a target="_blank" rel="noopener" href="https://www.v2ex.com/t/535608">帖子</a>里说可能有危险，密钥直接明文我是知道的，其实也不要紧，公开仓库这种东西，本地肯定是有备份的</p>
-<p>评论的认证机制比较麻烦，因为要自己开启评论区（还好，授权一次以后打开页面自动就会开启），我看项目的 readme 好像有个办法是给经常评论的人仓库的 contributor，这样 ta 们想说话的时候能自己初始化。不过不清楚是不是会受到上一段的影响</p>
-<p>所有想评论的人都要从这里登录，然后允许给我设置的 oauth app 写所有公共仓库的权限，之后才能评论</p>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">view-source:$&#123;网址&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>这个<a target="_blank" rel="noopener" href="https://www.v2ex.com/t/535608">帖子</a>里说可能有危险，密钥直接明文我知道，其实不要紧，公开仓库本地肯定有备份</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查看（别人）密钥方法：</span><br><span class="line">view-source:$&#123;网址&#125;</span><br><span class="line">Ctrl + F [#gitalk-container]</span><br><span class="line">或</span><br><span class="line">document.querySelector(&quot;#gitalk-container~script~script&quot;).innerText</span><br></pre></td></tr></table></figure>
 
+<p>评论的认证机制比较麻烦，评论区需要有创建 issue 权利的人访问过页面后才会开启（因为要创建 issue），对于一直在使用它的人来说，这不会消耗多余的时间，反正提交之后总得访问看一看，对于写了成吨的博文再开始使用这项服务的用户，可能会需要<a target="_blank" rel="noopener" href="https://draveness.me/git-comments-initialize">自动初始化</a>之前博文的评论区的办法</p>
+<p>所有想评论的人都要从这里登录，然后允许给我设置的 oauth app 写所有公共仓库的权限，之后才能评论</p>
 <p>有个问题是 issue 标题字符数有不能超过 50 的限制，光脚的不怕穿鞋的，我直接把 permalink 删成 <code>:year/:mouth/:day</code> 完事，反正一天不可能写两篇。</p>
 <h2 id="Postscript"><a href="#Postscript" class="headerlink" title="Postscript"></a>Postscript</h2><p>有可能的话我还是希望能够耦合的少一些，不是弄个<code>&lt;script&gt;</code>生成在 html 里，而是每个页面引用同一份 js 文件，每个页面往 js 里送的参数只有自己的 issue 评论链接（我这里就是 permalink），其余的数据都配置在 js 里（能在生成时从 theme.xxx 取更好）<br>没学过这东西的逻辑，不明白该怎么写，以后再说</p>
 
