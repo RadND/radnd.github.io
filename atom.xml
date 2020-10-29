@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2020-10-20T08:48:46.678Z</updated>
+  <updated>2020-10-29T15:26:30.402Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -17,73 +17,73 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>购买一个平板</title>
+    <link href="https://example.com/2020/10/29/"/>
+    <id>https://example.com/2020/10/29/</id>
+    <published>2020-10-29T14:37:03.000Z</published>
+    <updated>2020-10-29T15:26:30.402Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今年桃饱网双十一活动已经开始了，我数了一下名下的流动财产，打算买一个平板。&lt;/p&gt;
+&lt;h2 id=&quot;为什么要买&quot;&gt;&lt;a href=&quot;#为什么要买&quot; class=&quot;headerlink&quot; title=&quot;为什么要买&quot;&gt;&lt;/a&gt;为什么要买&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;带着一堆书上课</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>就当花钱租教训</title>
+    <link href="https://example.com/2020/10/27/"/>
+    <id>https://example.com/2020/10/27/</id>
+    <published>2020-10-27T15:04:53.000Z</published>
+    <updated>2020-10-29T15:26:59.033Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;直到今天之前我都没有想到中国&lt;a href=&quot;%EF%BC%88%E8%AF%B4%E5%A4%A7%E9%99%86%E6%9B%B4%E7%A1%AE%E5%88%87%EF%BC%8C%E5%9B%A0%E4%B8%BA%E8%BF%99%E4%B8%AA%E5%8F</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Cisco Packet Tracer</title>
+    <link href="https://example.com/2020/10/20/"/>
+    <id>https://example.com/2020/10/20/</id>
+    <published>2020-10-20T04:26:30.000Z</published>
+    <updated>2020-10-21T10:31:05.061Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这学期修了一门「网络交换及路由技术」，要用到 Cisco Packet Tracer，群文件里只有大版本为 5 的，我已经有学校邮箱了，看看正版（出到大版本 7）感觉怎么样。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.netacad.com/portal/no</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>找零货币问题</title>
     <link href="https://example.com/2020/10/19/"/>
     <id>https://example.com/2020/10/19/</id>
     <published>2020-10-19T14:55:17.000Z</published>
-    <updated>2020-10-20T08:48:46.678Z</updated>
+    <updated>2020-10-26T06:09:50.004Z</updated>
     
     
       
       
     <summary type="html">&lt;blockquote&gt;&lt;p&gt;在美国，就像在大多数国家一样，给任何总数的零钱最好的方法是使用一个贪婪的策略——找到面额最大但少于总数的硬币，给其中一个，然后重复。例如，在美国，支付给一个人 97 美分的现金，照此策略 会得出找零 50*1 + 25*1 + 5*2 + 1*2 的</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>程序员必看纪录片</title>
-    <link href="https://example.com/2020/10/18/"/>
-    <id>https://example.com/2020/10/18/</id>
-    <published>2020-10-18T14:21:00.000Z</published>
-    <updated>2020-10-19T05:50:42.956Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这个标题有歧义&lt;/p&gt;
-&lt;p&gt;想看纪录片了，好奇有哪些关于从 0 开始数数的世界的纪录片，搜了搜，发现有一篇「10部程序员必看的纪录片」的文章在第一页搜索结果中占了多数席，打算先从这 10 部里挑些有趣的看看，其余类似主题的也放在这里&lt;/p&gt;
-&lt;h2 id=&quot;现代生活的秘密</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>开评论</title>
-    <link href="https://example.com/2020/10/17/"/>
-    <id>https://example.com/2020/10/17/</id>
-    <published>2020-10-17T15:40:11.000Z</published>
-    <updated>2020-10-20T08:48:39.887Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;挑选&quot;&gt;&lt;a href=&quot;#挑选&quot; class=&quot;headerlink&quot; title=&quot;挑选&quot;&gt;&lt;/a&gt;挑选&lt;/h2&gt;&lt;p&gt;在各个给静态网站提供评论功能的解决方案里面翻来翻去，有朋友建议我用 Disqus ，但是这个服务已经被墙了，我不可能只和程序员做朋友，所以选</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>惊天雷</title>
-    <link href="https://example.com/2020/10/16/"/>
-    <id>https://example.com/2020/10/16/</id>
-    <published>2020-10-16T04:37:01.000Z</published>
-    <updated>2020-10-19T05:58:49.258Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;是否要讨论&lt;del&gt;科学&lt;/del&gt;技术是不是一把双刃剑呢？今天就算了&lt;/p&gt;
-&lt;p&gt;56 年前的今天，中国第一颗原子弹爆炸成功，我想借此机会推销一下这首歌 China’s first atomic bomb test:&lt;a href=&quot;https://www.youtub</summary>
       
     
     

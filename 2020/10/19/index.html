@@ -14,7 +14,7 @@
 <meta property="og:description" content="在美国，就像在大多数国家一样，给任何总数的零钱最好的方法是使用一个贪婪的策略——找到面额最大但少于总数的硬币，给其中一个，然后重复。例如，在美国，支付给一个人 97 美分的现金，照此策略 会得出找零 50*1 + 25*1 + 5*2 + 1*2 的方法给出的硬币总数最少 然而，也有可能出现这种贪婪策略并不总是适用的硬币系统。例如，在一个奇怪的国家里，居民们出于某种奇怪的原因，决定使用 1、12、">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-10-19T14:55:17.000Z">
-<meta property="article:modified_time" content="2020-10-20T08:48:46.678Z">
+<meta property="article:modified_time" content="2020-10-26T06:09:50.004Z">
 <meta property="article:author" content="Rad 面">
 <meta name="twitter:card" content="summary">
   
@@ -104,10 +104,14 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <blockquote><p>在美国，就像在大多数国家一样，给任何总数的零钱最好的方法是使用一个贪婪的策略——找到面额最大但少于总数的硬币，给其中一个，然后重复。例如，在美国，支付给一个人 97 美分的现金，照此策略 会得出找零 50*1 + 25*1 + 5*2 + 1*2 的方法给出的硬币总数最少</p>
-<p>然而，也有可能出现这种贪婪策略并不总是适用的硬币系统。例如，在一个奇怪的国家里，居民们出于某种奇怪的原因，决定使用 1、12、14、63 的面值。假设你需要返还 24 美分。最好的方法是返还 2 枚 12 美分的硬币。然而，在贪心策略下，总是选择面额小于总数的最大硬币，你会选择一个 14 美分的硬币和 10 个 1 美分的硬币，总共是 15 美分。</p>
+<p>然而，也有可能出现这种贪婪策略并不总是适用的硬币系统。例如，在一个奇怪的国家里，居民们出于某种奇怪的原因，决定使用 1、12、14、63 的面值。假设你需要返还 24 美分。最好的方法是返还 2 枚 12 美分的硬币。然而，在贪心策略下，总是选择面额小于总数的最大硬币，你会选择一个 14 美分的硬币和 10 个 1 美分的硬币，总共 15 个硬币。</p>
 <footer><strong>Serence</strong><cite><a target="_blank" rel="noopener" href="https://blog.blinkstar.cn/post/yi-wen-nong-dong-di-guia">一文弄懂递归</a></cite></footer></blockquote>
 
-<p>我有个疑问：在货币面值满足哪些条件的时候，贪心法总是能得到硬币数量最少的一种方案？</p>
+<p>我有个疑问：在货币面值满足哪些条件的时候，贪心法总是能得到硬币数量最少的一种方案？充分或必要条件都行。</p>
+<p>1、4、5、10 付 8 ， 5 1 1 1 或 4 4 </p>
+<p>我的假设是在最大（但小于要付）的面值大于要付的钱数的一半时，如果有较小面值与要付的钱数不互质，就会发生这种情况</p>
+<p>似乎是正确的，但是怎么证明呢？而且这个假设似乎只在存在面值为 1 的硬币的情况下成立</p>
+<p>变成子问题？ 5 付 8 到 1 付 3 。4 付 8 到 4 付 4 。这种性质具有传递性，18 会导致 10 付 18 到 1、4、5 付<br> 8</p>
 
       
     </div>
@@ -121,6 +125,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2020/10/20/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          Cisco Packet Tracer
+        
+      </div>
+    </a>
   
   
     <a href="/2020/10/18/" id="article-nav-older" class="article-nav-link-wrap">
@@ -186,23 +199,23 @@
       <ul>
         
           <li>
+            <a href="/2020/10/29/">购买一个平板</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/27/">就当花钱租教训</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/20/">Cisco Packet Tracer</a>
+          </li>
+        
+          <li>
             <a href="/2020/10/19/">找零货币问题</a>
           </li>
         
           <li>
             <a href="/2020/10/18/">程序员必看纪录片</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/17/">开评论</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/16/">惊天雷</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/15/">新标签页扩展</a>
           </li>
         
       </ul>

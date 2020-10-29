@@ -14,7 +14,7 @@
 <meta property="og:description" content="大致步骤本来想着 gayhub 上的静态博客不是都好几年了么，连程序都有三四个，结果还是叫我碰到不少坑，在这里记一下，安装过程网上到处都有，我就不复读了，只列一个简单的列表  装 node  装 git  装 hexo  注册 github  添加 ssh 公钥  创建 &lt;username&gt;.github.io 仓库，设置一堆选项  ———— 可选 ————  购买域名  设置仓库的">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-10-11T15:03:46.000Z">
-<meta property="article:modified_time" content="2020-10-20T08:55:11.968Z">
+<meta property="article:modified_time" content="2020-10-27T13:17:40.152Z">
 <meta property="article:author" content="Rad 面">
 <meta name="twitter:card" content="summary">
   
@@ -142,6 +142,8 @@
 </li>
 <li><p>我在 gayhub 和 gaytee(coding?) 上用的是两个不同的密钥，所以还需要针对Git多账户<a target="_blank" rel="noopener" href="https://www.cnblogs.com/popfisher/p/5731232.html">专门做处理</a></p>
 </li>
+<li><p>顺便一说，↑这其实也是设置 ssh 的别名的办法，把 <code>Host $&#123;name&#125;</code> 改成别的就可以直接 <code>ssh $&#123;name&#125;</code> 了</p>
+</li>
 </ul>
 <h2 id="设置仓库的-custom-domain"><a href="#设置仓库的-custom-domain" class="headerlink" title="设置仓库的 custom domain"></a>设置仓库的 custom domain</h2><p>这个动作其实是是替你在仓库根目录里提交了一个 CNAME 文件，hexo 只会从本地库推送，不会从远程库拉取，所以下一次 <code>hexo d</code> 的时候这个 CNAME 文件肯定就被覆盖了，所以得把 CNAME 复制一份放到 <code>source/</code> 目录里</p>
 <p>按照 <a target="_blank" rel="noopener" href="https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#about-custom-domain-configuration">GitHub Docs</a> 所述，有必要先进行这一步，再配置 DNS 的 CNAME 记录</p>
@@ -240,23 +242,23 @@
       <ul>
         
           <li>
+            <a href="/2020/10/29/">购买一个平板</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/27/">就当花钱租教训</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/20/">Cisco Packet Tracer</a>
+          </li>
+        
+          <li>
             <a href="/2020/10/19/">找零货币问题</a>
           </li>
         
           <li>
             <a href="/2020/10/18/">程序员必看纪录片</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/17/">开评论</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/16/">惊天雷</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/15/">新标签页扩展</a>
           </li>
         
       </ul>
