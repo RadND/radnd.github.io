@@ -14,7 +14,7 @@
 <meta property="og:description" content="上一篇里有一个特别长的表格，vscode 不知道为什么有自动换行，导致那个表格的源码看起来惨不忍睹，查了一会，发现可能是 markdown 格式被什么扩展自动改成自动换行了，找到setting.json文件，把setting.json改成这样就行了 setting.json12345&quot;[markdown]&quot;: &amp;#123;+	&quot;editor.wordWrap&amp;quot">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-11-02T10:15:18.000Z">
-<meta property="article:modified_time" content="2020-11-06T04:44:12.994Z">
+<meta property="article:modified_time" content="2020-11-06T04:57:09.913Z">
 <meta property="article:author" content="Rad 面">
 <meta name="twitter:card" content="summary">
   
@@ -104,7 +104,8 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>上一篇里有一个特别长的表格，vscode 不知道为什么有自动换行，导致那个表格的源码看起来惨不忍睹，查了一会，发现可能是 markdown 格式被什么扩展自动改成自动换行了，找到<code>setting.json</code>文件，把<code>setting.json</code>改成这样就行了</p>
-<figure class="highlight diff"><figcaption><span>setting.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;[markdown]&quot;: &#123;</span><br><span class="line marked"><span class="addition">+	&quot;editor.wordWrap&quot;: &quot;wordWrapColumn&quot;,</span></span><br><span class="line marked"><span class="addition">+	&quot;editor.wordWrapColumn&quot;: 180,</span></span><br><span class="line">	&quot;editor.quickSuggestions&quot;: false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><figcaption><span>setting.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;[markdown]&quot;: &#123;</span><br><span class="line"><span class="addition">+	&quot;editor.wordWrap&quot;: &quot;wordWrapColumn&quot;,</span></span><br><span class="line"><span class="addition">+	&quot;editor.wordWrapColumn&quot;: 180,</span></span><br><span class="line">	&quot;editor.quickSuggestions&quot;: false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>就好了<br>我发现混用中英文的等宽字体会导致打出来的字依旧不等宽，看着有点不美观</p>
 
       
