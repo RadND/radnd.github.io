@@ -79,6 +79,48 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-vscode-自动换行" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/11/02/" class="article-date">
+  <time class="dt-published" datetime="2020-11-02T10:15:18.000Z" itemprop="datePublished">2020-11-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/11/02/">vscode 自动换行</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>上一篇里有一个特别长的表格，vscode 不知道为什么有自动换行，导致那个表格的源码看起来惨不忍睹，查了一会，发现可能是 markdown 格式被什么扩展自动改成自动换行了，找到<code>setting.json</code>文件，把<code>setting.json</code>改成这样就行了</p>
+<figure class="highlight diff"><figcaption><span>setting.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;[markdown]&quot;: &#123;</span><br><span class="line marked"><span class="addition">+	&quot;editor.wordWrap&quot;: &quot;wordWrapColumn&quot;,</span></span><br><span class="line marked"><span class="addition">+	&quot;editor.wordWrapColumn&quot;: 180,</span></span><br><span class="line">	&quot;editor.quickSuggestions&quot;: false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>就好了<br>我发现混用中英文的等宽字体会导致打出来的字依旧不等宽，看着有点不美观</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2020/11/02/" data-id="ckh0ecpvq00008su70gtc85b0" data-title="vscode 自动换行" class="article-share-link">Teilen</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
     <article id="post-购买一个平板" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2020/10/29/" class="article-date">
@@ -112,9 +154,10 @@
 <li>不选苹果的平板是因为我感觉它的生态太封闭，而且我现在也没有任何其余的苹果设备</li>
 <li>不选安卓的平板是因为我不想再花时间去寻找合适的看书用的 app —— 周围人已经遇到过 epub 格式在 他们的安卓平板上显示乱码的情况，而且没有解决</li>
 <li>在 Windows 上则根本不需要多想，pdf 用火狐读足矣，epub 用 calibre</li>
+<li>安卓的平板上的 qq 不能和手机同时在线</li>
 </ul>
 <p>选择 Windows 而非 Android 还有一个原因，使用安卓系统的时候，我只是个卑微的普通人[^1]，Windows 上我对浏览器多少还有一点了解。以及，在谈论 Windows 平板的时候，暗含了 GNU/Linux 平板的可能，这很有趣。</p>
-<h2 id="具体哪个型号"><a href="#具体哪个型号" class="headerlink" title="具体哪个型号"></a>具体哪个型号</h2><p>一开始我想买一个便宜点的苏菲，后来我发现没有便宜点的苏菲，只有贵的和二手的两种。对比完流动财产的数额和产品售价之后，我接受了自己是个穷人的现实。搜索一番以后，我发现国内有厂家卖寨板，好像还不赖</p>
+<h2 id="具体哪个型号"><a href="#具体哪个型号" class="headerlink" title="具体哪个型号"></a>具体哪个型号</h2><p>一开始我想买一个便宜点的苏菲，后来我发现没有便宜点的苏菲，只有贵的和二手的两种。翻新机还好，但是最便宜的 翻新 surface go 加上触控笔要 3300，再配键盘起码也 4000 了，对比了一下流动财产的数额和产品售价，我接受了自己是个穷人的现实。搜索一番以后，我发现国内有厂家卖寨板，好像还不赖</p>
 <table>
 <thead>
 <tr>
@@ -122,8 +165,8 @@
 <th>CPU</th>
 <th>尺寸</th>
 <th>电池(Wh/V*Ah)</th>
-<th>不带键盘重量(kg)</th>
-<th>价格</th>
+<th>无键盘重量(kg)</th>
+<th>价格 = 本体、电容笔 + 键盘</th>
 <th>备注</th>
 </tr>
 </thead>
@@ -133,7 +176,7 @@
 <td>11.6/IPS 1920*1080</td>
 <td>26.6</td>
 <td>0.80</td>
-<td>1938 = 1739（本体，电容笔）+199（键盘）</td>
+<td>1938 = 1739 + 199</td>
 <td></td>
 </tr>
 <tr>
@@ -142,7 +185,7 @@
 <td>12.0/IPS 2160*1440</td>
 <td>38.0</td>
 <td>0.78</td>
-<td>3487 = 3137（本体，电容笔）+349（键盘）</td>
+<td>3487 = 3137 + 349</td>
 <td>有储存内存 256GB 版本</td>
 </tr>
 <tr>
@@ -150,8 +193,8 @@
 <td><a target="_blank" rel="noopener" href="https://askgeek.io/en/cpus/Intel/Celeron-N4100">N4100</a></td>
 <td>13.3/2560*1440</td>
 <td>41.8 = 7.6*5.5</td>
-<td>1.063</td>
-<td>2148 = 1998（本体，电容笔）+150（键盘）</td>
+<td>1.06</td>
+<td>2148 = 1998 + 150</td>
 <td></td>
 </tr>
 <tr>
@@ -160,8 +203,8 @@
 <td>10.6/IPS 1920*1080</td>
 <td>31.8 = 7.4*4.3</td>
 <td>0.70</td>
-<td>2138 = 1999（本体，电容笔）+139(键盘)</td>
-<td>运行内存 4GB</td>
+<td>2138 = 1999 + 139</td>
+<td>运行内存 4GB 、已停产</td>
 </tr>
 </tbody></table>
 <p>写到这里我感觉很有必要推销一首歌，<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=MNux7PONvi4">Last Lungs - Oh, Good Morning</a>，中间那一遍遍重复的节奏很好听，量变产生质变，让这整首歌都变的更好听了。《森林报》的前言里说，一年就像一个有着 12 个月份做车轴的车轮，车轮滚一圈看起来和原来并没有什么不同，可这马车汽车火车不管什么东西却已经到了别处去了，我想我终日在做的这些看起来差不多的事情并不是浪费，有些东西确实叫我成功 modify 了模样</p>
@@ -206,7 +249,7 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>直到今天之前我都没有想到中国<a href="%E8%AF%B4%E5%A4%A7%E9%99%86%E6%9B%B4%E7%A1%AE%E5%88%87%EF%BC%8C%E5%9B%A0%E4%B8%BA%E8%BF%99%E4%B8%AA%E5%8F%AB%E3%80%8C%E8%B7%A8%E5%A2%83%E3%80%8D%E7%9A%84%E4%BA%92%E8%81%94%E7%BD%91%E5%87%BA%E5%8F%A3%E8%B7%A8%E7%9A%84%E4%B8%8D%E5%85%A8%E6%98%AF%E5%9B%BD%E7%95%8C">^1</a>的跨境互联出口这么不稳定。租了一个套路云香港的服务器，丢包率最好的时候也有30%，ssh 协议还会被当作是代理服务器的混淆方法直接强行终止<br>好在套路云有一年限一次的 5 天之内无条件退款，我就赶紧退款走人了<br>希望下次运气不会这么糟，或者我该说，封锁不会这么严。</p>
-<p>装的系统里没有自带 nano ，导致我必须要用 vim（不知道有没有自带 emacs ，名字太长了，没试） 来编辑 <code>shhd.config</code>，把 vim 当作记事本用只需要知道如下几个操作</p>
+<p>装的系统里没有自带 nano ，导致需要用 vim（不知道有没有自带 emacs ，名字太长了，没试） 来编辑 <code>shhd.config</code>，把 vim 当作记事本用只需要知道如下几个操作</p>
 <ul>
 <li>刚打开文件的时候在<em>命令模式</em>下，按 <code>I</code> 可以切换到<em>普通模式</em></li>
 <li><em>普通模式</em>下按 <code>ESC</code> 可以切换到<em>命令模式</em></li>
@@ -254,6 +297,46 @@
       
         <p>这学期修了一门「网络交换及路由技术」，要用到 Cisco Packet Tracer，群文件里只有大版本为 5 的，我已经有学校邮箱了，看看正版（出到大版本 7）感觉怎么样。</p>
 <p><a target="_blank" rel="noopener" href="https://www.netacad.com/portal/node/488">下载地址</a>:用之前要注册一个思科网络学院的账号</p>
+<p>遇到了一些问题，路由器分的型号比较多，只有很有限的几个型号有串口(serial)，最后发现其实是因为我没有注意听讲，路由器是模块化的， 大部分型号的串口都要在配置界面的<code>Physical</code>框里手动安装模块获得</p>
+<h2 id="路由器基本操作"><a href="#路由器基本操作" class="headerlink" title="路由器基本操作"></a>路由器基本操作</h2><h3 id="几种模式的特征"><a href="#几种模式的特征" class="headerlink" title="几种模式的特征"></a>几种模式的特征</h3><table>
+<thead>
+<tr>
+<th>特征</th>
+<th>名称</th>
+<th>状态转移到此模式的方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>(config-if)</code></td>
+<td>接口模式</td>
+<td>全局模式 <code>interface+接口类型+接口号</code>;在图形界面配置 ip 会自动切换到此状态</td>
+</tr>
+<tr>
+<td><code>(config)</code></td>
+<td>全局模式</td>
+<td>特权模式 <code>configure terminal</code></td>
+</tr>
+<tr>
+<td><code>#</code></td>
+<td>特权模式</td>
+<td>用户模式 <code>enable</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>用户模式</td>
+<td>理论上的初始状态，多按几下 <code>↵</code> 和 <code>Ctrl + Z</code> 也能到</td>
+</tr>
+<tr>
+<td><code>(config-line)</code></td>
+<td>线模式</td>
+<td>全局模式 <code>line+接口类型+接口号</code></td>
+</tr>
+<tr>
+<td><code>(config-router)</code></td>
+<td>路由模式</td>
+<td>全局模式配置任意路由协议</td>
+</tr>
+</tbody></table>
 
       
     </div>
@@ -420,50 +503,6 @@
 
 
   
-    <article id="post-惊天雷" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/10/16/" class="article-date">
-  <time class="dt-published" datetime="2020-10-16T04:37:01.000Z" itemprop="datePublished">2020-10-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/10/16/">惊天雷</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>是否要讨论<del>科学</del>技术是不是一把双刃剑呢？今天就算了</p>
-<p>56 年前的今天，中国第一颗原子弹爆炸成功，我想借此机会推销一下这首歌 China’s first atomic bomb test:<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=BLTj_DUK6ls">Mooncake - Rain in the ashtray</a> ，很好听</p>
-<p>这个 mv 用现在的说法应该叫 三次创作，原作是 <a target="_blank" rel="noopener" href="https://bilibili.com/video/av7831323">《欢呼我国三次核试验成功》</a>，由八一电影制片厂拍摄于1966年，二创是美国的纪录片<a target="_blank" rel="noopener" href="https://bilibili.com/video/av71863"><em>Trinity and Beyond-Atomi</em></a>最后几分钟，不过究竟是是二创还是三创，视频的上传者没说，视频出现了一些只在二创里出现了的影像资料，但也有可能只是国内公开的的只剩下被和谐过的版本</p>
-<p>人高兴的时候是会跳起来的，真神奇，我从没在生活中见到过有这么多人同时跳起来</p>
-<p>惊天雷这个词来自于 cOMMANDO 的 <a target="_blank" rel="noopener" href="https://www.douban.com/note/21357543/">碧空雄鹰</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://example.com/2020/10/16/" data-id="ckgvty20a000b5gu7c5q70pvv" data-title="惊天雷" class="article-share-link">Teilen</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -487,7 +526,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
     </div>
   </div>
 
@@ -498,6 +537,10 @@
     <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/11/02/">vscode 自动换行</a>
+          </li>
         
           <li>
             <a href="/2020/10/29/">购买一个平板</a>
@@ -513,10 +556,6 @@
         
           <li>
             <a href="/2020/10/19/">找零货币问题</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/18/">程序员必看纪录片</a>
           </li>
         
       </ul>

@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2020-11-02T09:15:14.432Z</updated>
+  <updated>2020-11-06T04:44:12.994Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -17,11 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vscode 自动换行</title>
+    <link href="https://example.com/2020/11/02/"/>
+    <id>https://example.com/2020/11/02/</id>
+    <published>2020-11-02T10:15:18.000Z</published>
+    <updated>2020-11-06T04:44:12.994Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;上一篇里有一个特别长的表格，vscode 不知道为什么有自动换行，导致那个表格的源码看起来惨不忍睹，查了一会，发现可能是 markdown 格式被什么扩展自动改成自动换行了，找到&lt;code&gt;setting.json&lt;/code&gt;文件，把&lt;code&gt;setting.json&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>购买一个平板</title>
     <link href="https://example.com/2020/10/29/"/>
     <id>https://example.com/2020/10/29/</id>
     <published>2020-10-29T14:37:03.000Z</published>
-    <updated>2020-11-02T09:15:14.432Z</updated>
+    <updated>2020-11-04T02:39:26.693Z</updated>
     
     
       
@@ -41,7 +59,7 @@
     <link href="https://example.com/2020/10/27/"/>
     <id>https://example.com/2020/10/27/</id>
     <published>2020-10-27T15:04:53.000Z</published>
-    <updated>2020-11-01T15:05:56.881Z</updated>
+    <updated>2020-11-04T02:23:00.461Z</updated>
     
     
       
@@ -59,31 +77,13 @@
     <link href="https://example.com/2020/10/20/"/>
     <id>https://example.com/2020/10/20/</id>
     <published>2020-10-20T04:26:30.000Z</published>
-    <updated>2020-10-21T10:31:05.061Z</updated>
+    <updated>2020-11-04T04:15:39.571Z</updated>
     
     
       
       
     <summary type="html">&lt;p&gt;这学期修了一门「网络交换及路由技术」，要用到 Cisco Packet Tracer，群文件里只有大版本为 5 的，我已经有学校邮箱了，看看正版（出到大版本 7）感觉怎么样。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.netacad.com/portal/no</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>找零货币问题</title>
-    <link href="https://example.com/2020/10/19/"/>
-    <id>https://example.com/2020/10/19/</id>
-    <published>2020-10-19T14:55:17.000Z</published>
-    <updated>2020-10-26T06:09:50.004Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;blockquote&gt;&lt;p&gt;在美国，就像在大多数国家一样，给任何总数的零钱最好的方法是使用一个贪婪的策略——找到面额最大但少于总数的硬币，给其中一个，然后重复。例如，在美国，支付给一个人 97 美分的现金，照此策略 会得出找零 50*1 + 25*1 + 5*2 + 1*2 的</summary>
       
     
     
