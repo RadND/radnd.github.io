@@ -79,6 +79,58 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-开评论" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/10/17/" class="article-date">
+  <time class="dt-published" datetime="2020-10-17T15:40:11.000Z" itemprop="datePublished">2020-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/10/17/">开评论</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="挑选"><a href="#挑选" class="headerlink" title="挑选"></a>挑选</h2><p>在各个给静态网站提供评论功能的解决方案里面翻来翻去，有朋友建议我用 Disqus ，但是这个服务已经被墙了，我不可能只和程序员做朋友，所以选一个没有被墙的服务比较好，但用国内的服务又得来一遍 手机号实名备案 三连，干脆跳过不考虑。最后发现一个叫 gitalk 的，可以用 issue 当评论区用，就打算用这个了。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>这个<a target="_blank" rel="noopener" href="https://www.v2ex.com/t/535608">帖子</a>里说可能有危险，密钥直接明文我知道，其实不要紧，公开仓库本地肯定有备份</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查看（别人）密钥方法：</span><br><span class="line">view-source:$&#123;网址&#125;</span><br><span class="line">Ctrl + F [#gitalk-container]</span><br><span class="line">或</span><br><span class="line">document.querySelector(&quot;#gitalk-container~script~script&quot;).innerText</span><br></pre></td></tr></table></figure>
+
+<p>评论的认证机制比较麻烦，评论区需要有创建 issue 权利的人访问过页面后才会开启（因为要创建 issue），对于一直在使用它的人来说，这不大会消耗多余的时间，反正提交之后总得访问看一看，对于写了成吨的博文再开始使用这项服务的用户，可能会需要<a target="_blank" rel="noopener" href="https://draveness.me/git-comments-initialize">自动初始化</a>之前博文的评论区的办法</p>
+<p>不清楚能不能手动创建一个名字相同的 issue ，使得评论区显示出来</p>
+<p>所有想评论的人都要从这里登录，然后允许给我设置的 oauth app 写所有公共仓库的权限，之后才能评论</p>
+<p>有个问题是 issue 标题字符数有不能超过 50 的限制，光脚的不怕穿鞋的，我直接把 permalink 删成 <code>:year/:mouth/:day</code> 完事，反正一天不可能写两篇。</p>
+<h2 id="Postscript"><a href="#Postscript" class="headerlink" title="Postscript"></a>Postscript</h2><p>有可能的话我还是希望能够耦合的少一些，不是弄个<code>&lt;script&gt;</code>生成在 html 里，而是每个页面引用同一份 js 文件，每个页面通过<code>&lt;script&gt;</code>标签往 js 里送的参数只有自己的 issue 评论链接（我这里就是 permalink）</p>
+<p>其余的数据都配置在 js 里（能在生成时从 theme.xxx 取更好）,我有限的知识只知道 ejs 能生成 html ，不知道能不能生成 js，理想情况下是这样：</p>
+<figure class="highlight plain"><figcaption><span>some-theme/.../gitalk.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--...--&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;public&#x2F;...&#x2F;gitalk.js&quot; data-issue&#x3D;&#39;&lt;%&#x3D; post.permalink %&gt;&#39;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;!--...--&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><figcaption><span>gitlak.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Gitalk(&#123;</span><br><span class="line">    clientID: <span class="string">&#x27;&lt;%= theme.gitalk.ClientID %&gt;&#x27;</span>,</span><br><span class="line">    clientSecret: <span class="string">&#x27;&lt;%= theme.gitalk.ClientSecret %&gt;&#x27;</span>,</span><br><span class="line">    repo: <span class="string">&#x27;&lt;%= theme.gitalk.repo %&gt;&#x27;</span>,</span><br><span class="line">    owner: <span class="string">&#x27;&lt;%= theme.gitalk.owner %&gt;&#x27;</span>,</span><br><span class="line">    admin: [<span class="string">&#x27;&lt;%= theme.gitalk.admin %&gt;&#x27;</span>],</span><br><span class="line">    id: <span class="built_in">document</span>.querySelector(<span class="string">&quot;#gitalk-container~script~script&quot;</span>).dataset.issue,</span><br><span class="line">    distractionFreeMode: <span class="literal">false</span></span><br><span class="line">&#125;).render(<span class="string">&#x27;gitalk-container&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2020/10/17/" data-id="ckgvty20b000c5gu7hmsmfpsv" data-title="开评论" class="article-share-link">Teilen</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
     <article id="post-惊天雷" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2020/10/16/" class="article-date">
@@ -428,57 +480,6 @@
 
 
   
-    <article id="post-光盘行动" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/10/09/" class="article-date">
-  <time class="dt-published" datetime="2020-10-09T04:47:31.000Z" itemprop="datePublished">2020-10-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/10/09/">光盘行动</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="经过"><a href="#经过" class="headerlink" title="经过"></a>经过</h2><p>吃完饭看剧的时候有人过来问我能不能帮个忙，对着镜头说一些给定的提倡光盘行动的话，我拒绝了。他又说这也许会用学校的微博发出来，我又拒绝了一遍。然后他又说你看你盘子里确实把饭吃光了说明你认同这种理念那为何不给它做做宣传呢？我不知道怎么回答，所以我仓促的又拒绝了一遍，然后尽快离开了食堂。</p>
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>人干点事总喜欢给自己找个原因，我不是例外。<br>这种事情没有意义，靠一些人机械地喊口号说服不了任何人，如果想要让人意识到剩饭不好，就该请食堂的工作人员们来说，或者发些图表，说明一下这些泔水处理起来有哪些麻烦，比让学生们句读好得多<br>这让我想到了一些事情，以前我见过怎么喂猪，还听过一些关于把剩饭菜卖给猪养殖户的新闻<br>喂猪是用猪饲料兑水，然后倒进食槽里，偶尔会有从城里饭馆拉来的泔水，这里面会有一些肉，给猪喂猪肉显然太浪费了，而且我也不知道猪是不是真的会去吃。所以会先用那种夹蜂窝煤的钳子从塑料桶里把肉夹出来，留给狗吃。<br>剩饭的新闻好像说的是一种新的发明，申请了专利，简单来讲就是淀粉牙签，原本使用的木制牙签混到泔水里以后挑是挑不出来的，喂猪会导致猪划伤食道/胃，剩饭卖不出价。有家饭店改用淀粉做的牙签，尽管很硬，进了食道就自动溶解了，于是周围的养殖户会优先购买他们饭店的泔水。<br>学校里的剩饭是不是卖到喂猪的人那里去呢？如果是，为什么要担心剩饭的问题呢？如果不是，为什么不卖呢？<br>比起剩饭可能引发的问题，我觉得打饭外带用塑料盒可能造成的问题更大些，没有人会在用完的饭盒里塞垃圾，所以里面都是空气，但饭盒也要和其他垃圾一起放在垃圾袋里丢掉，导致往往塞两三个饭盒，垃圾袋就装不下其他垃圾了，就是说饭盒的使用促进了垃圾袋的浪费，这些东西要怎么回收？很久没有听过这种报道<br>外卖的塑料袋也是，太多了，让我有点不安。<br>快递的硬纸箱还好，不用担心回收率，这个东西回收有钱赚，保洁阿姨会专门挑出来。</p>
-<p>10/14 更新：宿舍区的保洁阿姨会把饭盒挑出来，剩饭放在一起，盒子放在一起，不知道是有利可图还是校方命令</p>
-<h2 id="回收"><a href="#回收" class="headerlink" title="回收"></a>回收</h2><p>讲着讲着讲到回收去了，干脆再补上这些：</p>
-<ul>
-<li><p>一次性电池，无线电测向那个测向机用的也是一次性电池，没有专门回收</p>
-</li>
-<li><p>中性笔笔芯，不知道有没有人回收</p>
-</li>
-<li><p>废旧电器，那些 ddr2 的内存，最后会怎么处理呢？断了一个针脚的 cpu ，最后会怎么处理呢？</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://example.com/2020/10/09/" data-id="ckgvty20700085gu76fn13cso" data-title="光盘行动" class="article-share-link">Teilen</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -515,6 +516,10 @@
       <ul>
         
           <li>
+            <a href="/2020/11/08/">js 处理二进制数据</a>
+          </li>
+        
+          <li>
             <a href="/2020/11/02/">vscode 自动换行</a>
           </li>
         
@@ -528,10 +533,6 @@
         
           <li>
             <a href="/2020/10/20/">Cisco Packet Tracer</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/19/">找零货币问题</a>
           </li>
         
       </ul>

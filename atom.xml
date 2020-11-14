@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2020-11-06T04:57:09.913Z</updated>
+  <updated>2020-11-14T07:06:07.939Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -17,16 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>js 处理二进制数据</title>
+    <link href="https://example.com/2020/11/08/"/>
+    <id>https://example.com/2020/11/08/</id>
+    <published>2020-11-08T14:17:45.000Z</published>
+    <updated>2020-11-14T07:06:07.939Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;第一层需求&quot;&gt;&lt;a href=&quot;#第一层需求&quot; class=&quot;headerlink&quot; title=&quot;第一层需求&quot;&gt;&lt;/a&gt;第一层需求&lt;/h2&gt;&lt;p&gt;之前（大概是一年以内），我在玩用 RPG Maker 所制作的游戏，没有加密，但图片素材全部都被打包成了&lt;code&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>vscode 自动换行</title>
     <link href="https://example.com/2020/11/02/"/>
     <id>https://example.com/2020/11/02/</id>
     <published>2020-11-02T10:15:18.000Z</published>
-    <updated>2020-11-06T04:57:09.913Z</updated>
+    <updated>2020-11-12T05:00:15.266Z</updated>
     
     
       
       
-    <summary type="html">&lt;p&gt;上一篇里有一个特别长的表格，vscode 不知道为什么有自动换行，导致那个表格的源码看起来惨不忍睹，查了一会，发现可能是 markdown 格式被什么扩展自动改成自动换行了，找到&lt;code&gt;setting.json&lt;/code&gt;文件，把&lt;code&gt;setting.json&lt;</summary>
+    <summary type="html">&lt;p&gt;上一篇里有一个特别长的表格，vscode 不知道为什么有自动换行，导致那个表格的源码看起来惨不忍睹，查了一会，发现可能是 markdown 格式被什么扩展自动改成自动换行了，找到&lt;code&gt;setting.json&lt;/code&gt;文件，改成这样就行了&lt;/p&gt;
+&lt;figure </summary>
       
     
     
@@ -39,7 +58,7 @@
     <link href="https://example.com/2020/10/29/"/>
     <id>https://example.com/2020/10/29/</id>
     <published>2020-10-29T14:37:03.000Z</published>
-    <updated>2020-11-04T02:39:26.693Z</updated>
+    <updated>2020-11-14T07:03:02.806Z</updated>
     
     
       
@@ -65,25 +84,6 @@
       
       
     <summary type="html">&lt;p&gt;直到今天之前我都没有想到中国&lt;a href=&quot;%E8%AF%B4%E5%A4%A7%E9%99%86%E6%9B%B4%E7%A1%AE%E5%88%87%EF%BC%8C%E5%9B%A0%E4%B8%BA%E8%BF%99%E4%B8%AA%E5%8F%AB%E3%80</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Cisco Packet Tracer</title>
-    <link href="https://example.com/2020/10/20/"/>
-    <id>https://example.com/2020/10/20/</id>
-    <published>2020-10-20T04:26:30.000Z</published>
-    <updated>2020-11-06T14:39:38.657Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这学期修了一门「网络交换及路由技术」，要用到 Cisco Packet Tracer，群文件里只有大版本为 5 的，机房里的大版本是 6 ，我已经有学校邮箱了，看看最新版（出到大版本 7）怎么样。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.netacad.co</summary>
       
     
     

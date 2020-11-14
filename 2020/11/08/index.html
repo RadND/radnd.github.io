@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>js 处理二进制数据 | 一〇五曲柄中的雨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="第一层需求之前（大概是一年以内），我在玩用 RPG Maker 所制作的游戏，没有加密，但图片素材全部都被打包成了*.rpgmvp，用压缩软件打不开，找了找发现一个可以一张一张手动解包的网页工具。有没有支持批量转换，而且自动显示的工具呢？好像有用 java 写的，网页端的没找到。那就自个儿想法写吧，定个小目标，先从读二进制文件开始。 准备工作 获取文件显然要用 File API  处理二进制数据需">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js 处理二进制数据">
+<meta property="og:url" content="https://example.com/2020/11/08/index.html">
+<meta property="og:site_name" content="一〇五曲柄中的雨">
+<meta property="og:description" content="第一层需求之前（大概是一年以内），我在玩用 RPG Maker 所制作的游戏，没有加密，但图片素材全部都被打包成了*.rpgmvp，用压缩软件打不开，找了找发现一个可以一张一张手动解包的网页工具。有没有支持批量转换，而且自动显示的工具呢？好像有用 java 写的，网页端的没找到。那就自个儿想法写吧，定个小目标，先从读二进制文件开始。 准备工作 获取文件显然要用 File API  处理二进制数据需">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-11-08T14:17:45.000Z">
+<meta property="article:modified_time" content="2020-11-14T07:06:07.939Z">
+<meta property="article:author" content="Rad 面">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="一〇五曲柄中的雨" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">一〇五曲柄中的雨</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">主标题没有什么意义</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/bio">Bio</a>
+        
+          <a class="main-nav-link" href="/friend">Frnd</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-js 处理二进制数据" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/11/08/" class="article-date">
+  <time class="dt-published" datetime="2020-11-08T14:17:45.000Z" itemprop="datePublished">2020-11-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      js 处理二进制数据
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="第一层需求"><a href="#第一层需求" class="headerlink" title="第一层需求"></a>第一层需求</h2><p>之前（大概是一年以内），我在玩用 RPG Maker 所制作的游戏，没有加密，但图片素材全部都被打包成了<code>*.rpgmvp</code>，用压缩软件打不开，找了找发现一个可以一张一张手动解包的<a target="_blank" rel="noopener" href="https://github.com/Petschko/RPG-Maker-MV-Decrypter">网页工具</a>。有没有支持批量转换，而且自动显示的工具呢？好像有用 java 写的，网页端的没找到。那就自个儿想法写吧，定个小目标，先从读二进制文件开始。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li><p>获取文件显然要用 File API</p>
+</li>
+<li><p>处理二进制数据需要用 ArrayBuffer</p>
+</li>
+<li><p>二进制文件里比较简单的我就知道一个 <code>bmp</code></p>
+</li>
+<li><p>看一眼 <code>bmp</code> 文件的格式定义，好几个结构体，用不了 TypedArray，需要用 DataView</p>
+</li>
+</ul>
+<p>注：这只是一个例子，虽然不推荐，但是主流浏览器都支持在<code>&lt;img&gt;</code>标签里显示 bmp<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">^1</a></p>
+<h2 id="读文件"><a href="#读文件" class="headerlink" title="读文件"></a>读文件</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">id</span>=<span class="string">&quot;input&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&quot;input&quot;</span>).addEventListener(<span class="string">&quot;change&quot;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">//const file = e.target.files[0];</span></span><br><span class="line">  <span class="keyword">const</span> file = <span class="built_in">this</span>.files[<span class="number">0</span>];</span><br><span class="line">  file.arrayBuffer().then(<span class="function">() =&gt;</span> &#123; &#125;);</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+<p>然后就开始机械的读二进制数据了，教材第 32 页倒数几行对彩色版（颜色表）的讲解有问题，多了 4 个 0000</p>
+<p>我又找到几处错误，30 页 位图信息头的定义 ，<code>biPlanes</code> 的注释是一句没人能看懂的「目标设备的级别，必须为 1」，实际上这个值的意思是色彩平面的数量，早些年位不够宽的时候实现更大色深用的<a target="_blank" rel="noopener" href="https://blog.csdn.net/iMatt/article/details/92986366">^2</a>，现在颜色表里那个 <code>rgbReserverd</code> 被拿去存 Alpha(透明度)了，32 页讲的掩码是色彩版在嵌入式平台上的的一种常见表示方式，pc 上不用<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Matrix_Yao/archive/2009/12/02/1615295.html">^3</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.i-programmer.info/projects/36-web/6234-reading-a-bmp-file-in-javascript.html">Reading A BMP File In JavaScript</a></li>
+<li>陈天华.数字图像处理（第 2 版）.北京:清华大学出版社,2014. （教材）</li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/54195797">JavaScript二进制数组（2）TypedArray视图</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2020/11/08/" data-id="ckhhcgrz20000jcu7d0x2b0tt" data-title="js 处理二进制数据" class="article-share-link">Teilen</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/11/02/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">vscode 自动换行</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+  <section id="comments">
+    <div id="gitalk-container">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<!-- <script src="https://priesttomb.github.io/js/md5.min.js"></script> -->
+
+<script type="text/javascript">
+    new Gitalk({
+        clientID: 'ee7882e1da49ac03b58a',
+        clientSecret: '8e5ad839a30fdf796138a5fdba920376600c5ef8',
+        repo: 'page-comments',
+        owner: 'radnd',
+        admin: ['radnd'],
+        id: 'https://example.com/2020/11/08/',
+        distractionFreeMode: false
+    }).render('gitalk-container')
+</script>
+  </section>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/11/08/">js 处理二进制数据</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/02/">vscode 自动换行</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/29/">购买一个平板</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/27/">就当花钱租教训</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/20/">Cisco Packet Tracer</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2020 Rad 面<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/bio" class="mobile-nav-link">Bio</a>
+  
+    <a href="/friend" class="mobile-nav-link">Frnd</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
