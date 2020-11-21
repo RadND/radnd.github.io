@@ -39,13 +39,13 @@
     <link href="https://example.com/2020/11/02/"/>
     <id>https://example.com/2020/11/02/</id>
     <published>2020-11-02T10:15:18.000Z</published>
-    <updated>2020-11-12T05:00:15.266Z</updated>
+    <updated>2020-11-14T07:07:22.311Z</updated>
     
     
       
       
-    <summary type="html">&lt;p&gt;上一篇里有一个特别长的表格，vscode 不知道为什么有自动换行，导致那个表格的源码看起来惨不忍睹，查了一会，发现可能是 markdown 格式被什么扩展自动改成自动换行了，找到&lt;code&gt;setting.json&lt;/code&gt;文件，改成这样就行了&lt;/p&gt;
-&lt;figure </summary>
+    <summary type="html">&lt;p&gt;上一篇里有一个特别长的表格，vscode 不知道为什么有自动换行，导致那个表格的源码看起来惨不忍睹，查了一会，发现可能是 markdown 格式被什么扩展自动改成自动换行了，找到&lt;code&gt;setting.json&lt;/code&gt;文件，改成这样&lt;/p&gt;
+&lt;figure cla</summary>
       
     
     
@@ -58,7 +58,7 @@
     <link href="https://example.com/2020/10/29/"/>
     <id>https://example.com/2020/10/29/</id>
     <published>2020-10-29T14:37:03.000Z</published>
-    <updated>2020-11-14T07:03:02.806Z</updated>
+    <updated>2020-11-14T07:49:44.551Z</updated>
     
     
       

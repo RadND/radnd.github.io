@@ -14,7 +14,7 @@
 <meta property="og:description" content="这学期修了一门「网络交换及路由技术」，要用到 Cisco Packet Tracer，群文件里只有大版本为 5 的，机房里的大版本是 6 ，我已经有学校邮箱了，看看最新版（出到大版本 7）怎么样。 下载地址:用之前要注册一个思科网络学院的账号 遇到了一些问题，路由器分的型号比较多，只有很有限的几个型号有串口(serial)，最后发现其实是因为我没有注意听讲，路由器是模块化的， 大部分型号的串口都要">
 <meta property="og:locale">
 <meta property="article:published_time" content="2020-10-20T04:26:30.000Z">
-<meta property="article:modified_time" content="2020-11-07T04:04:03.193Z">
+<meta property="article:modified_time" content="2020-11-18T09:42:03.107Z">
 <meta property="article:author" content="Rad 面">
 <meta name="twitter:card" content="summary">
   
@@ -132,7 +132,7 @@
 <tr>
 <td><code>&gt;</code></td>
 <td>用户模式</td>
-<td>理论上的初始状态，多按几下 <code>↵</code> 和 <code>Ctrl + Z</code> 也能到</td>
+<td>特权模式 <code>disable</code> 理论上的初始状态，多按几下 <code>↵</code> 和 <code>Ctrl + Z</code> 也能到</td>
 </tr>
 <tr>
 <td><code>(config-line)</code></td>
@@ -145,14 +145,14 @@
 <td>全局模式配置任意路由协议</td>
 </tr>
 </tbody></table>
-<h3 id="Cheat-Sheet"><a href="#Cheat-Sheet" class="headerlink" title="Cheat Sheet"></a>Cheat Sheet</h3><figure class="highlight plain"><figcaption><span>配置静态路由</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 指定送出网络</span><br><span class="line">Router(config)# ip route network-address subnet-mask ip-address</span><br><span class="line">	network-address 	--要加入路由表的远程网络的目的网络地址</span><br><span class="line">	subnet-mask 		--要加入路由表的远程网络的子网掩码，可对此子网掩码进行修改，以总结一组网络</span><br><span class="line">	ip-address 		--一般指下一跳路由器的 IP 地址</span><br><span class="line"></span><br><span class="line">例:ip route 172.16.3.0 255.255.255.0 192.168.1.2</span><br><span class="line"></span><br><span class="line"># 指定送出接口</span><br><span class="line">Router(config)# ip route network-address subnet-mask exit-interface</span><br><span class="line">	network-address 	--同上</span><br><span class="line">	subnet-mask 		--同上</span><br><span class="line">	exit-interface 		--将数据包转发到目的网络时使用的传出接口</span><br><span class="line"></span><br><span class="line">例:ip route 172.16.3.0 255.255.255.0 Serial0&#x2F;0&#x2F;0</span><br><span class="line"></span><br><span class="line"># **默认**静态路由（即覆盖面最广，优先级最低的的路由）</span><br><span class="line">ip route 0.0.0.0 0.0.0.0 &#123; ip-address| interface&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Cheat-Sheet"><a href="#Cheat-Sheet" class="headerlink" title="Cheat Sheet"></a>Cheat Sheet</h3><figure class="highlight plain"><figcaption><span>配置静态路由</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># 指定送出网络</span><br><span class="line">Router(config)# ip route network-address subnet-mask ip-address</span><br><span class="line">	network-address 	--要加入路由表的远程网络的目的网络地址</span><br><span class="line">	subnet-mask 		--要加入路由表的远程网络的子网掩码，可对此子网掩码进行修改，以总结一组网络</span><br><span class="line">	ip-address 		--一般指下一跳路由器的 IP 地址</span><br><span class="line"></span><br><span class="line">例:ip route 172.16.3.0 255.255.255.0 192.168.1.2</span><br><span class="line"></span><br><span class="line"># 指定送出接口</span><br><span class="line">Router(config)# ip route network-address subnet-mask exit-interface</span><br><span class="line">	network-address 	--同上</span><br><span class="line">	subnet-mask 		--同上</span><br><span class="line">	exit-interface 		--将数据包转发到目的网络时使用的传出接口</span><br><span class="line"></span><br><span class="line">例:ip route 172.16.3.0 255.255.255.0 Serial0&#x2F;0&#x2F;0</span><br><span class="line"></span><br><span class="line"># **默认**静态路由（即覆盖面最广，优先级最低的的路由）</span><br><span class="line">ip route 0.0.0.0 0.0.0.0 &#123; ip-address| interface&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 在特权模式下立即终止向对 dns 服务器的请求 &lt;CTRL&gt;+&lt;SHIFT&gt;+6</span><br><span class="line"></span><br><span class="line"># 禁用 DNS 查找</span><br><span class="line">	no ip domain-lookup</span><br><span class="line"></span><br><span class="line"># 配置同步日志输出</span><br><span class="line"> logging synchronous命令的主要目的是将日志消息输出和调试输出同步到路由器线路上：控制台、辅助和VTY线路。</span><br></pre></td></tr></table></figure>
 
 <p>路由器的命令并没有形成标准，事实标准是思科的这一套，华为的路由器操作有些许不同，不同在哪里，我不知道</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://example.com/2020/10/20/" data-id="ckgvty20300035gu78v1l7gzj" data-title="Cisco Packet Tracer" class="article-share-link">Teilen</a>
+      <a data-url="https://example.com/2020/10/20/" data-id="ckhrqxoqp0007vgu70es7bnic" data-title="Cisco Packet Tracer" class="article-share-link">Teilen</a>
       
       
       
