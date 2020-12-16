@@ -79,6 +79,75 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-几道题的解释" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/12/15/" class="article-date">
+  <time class="dt-published" datetime="2020-12-15T15:10:56.000Z" itemprop="datePublished">2020-12-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/12/15/">几道题的解释</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>没啥好讲的，算法设计与分析的作业题，列一下给有缘人看</p>
+<p><img src="https://s3.ax1x.com/2020/12/15/rQ3GOx.png" alt="题目"></p>
+<h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><p>开始我以为是线性规划，想着怎么这么难，网上查了一下只找到现成的 py 函数，没有线性规划求解的原理，后来又看了看题，发现巨简单。</p>
+<p>管道只能横平竖直的建，先挑一个 y 坐标最大的，再挑一个 y 坐标最小的，先假设只有这两口油井，会发生什么事呢？</p>
+<p>$$Y\ 为油井\ y\ 坐标的集合$$<br>$$y_{main} 为主管道\ y\ 坐标$$<br>$$y_{max} = max(Y)$$<br>$$y_{min} = min(Y)$$<br>$$length=|y_{max}- y_{main}|+|y_{min}- y_{main}|$$</p>
+<p>得到</p>
+<p>$$<br>length=\left{<br>\begin{aligned}<br>&amp; 不重要 &amp; y_{main}&gt;y_{max}&gt;y_{min} \<br>&amp; y_{max}- y_{min} &amp;  y_{max}&gt;y_{main}&gt;y_{min} \<br>&amp; 不重要 &amp; y_{max}&gt;y_{min}&gt;y_{main}<br>\end{aligned}<br>\right.<br>$$</p>
+<p>那么接着两个两个的引入剩下的最大值和最小值，范围逐渐向中间缩小，在这个过程中，只要主管道一直选在所有油井的 y 坐标值之间，由于满足此条件的时候到每两个管道的距离是最小的，所有的最小值加在一起还是最小值，于是到所有管道的距离始终是最小的。</p>
+<p>如果有奇数口油井，单独考虑一下情况最后剩下中间一口油井的情况，发现正好按照这口油井的 y 坐标来修主管道就行了，这样到最后一口油井的距离直接就是 0，其他的不影响</p>
+<p>因此奇数口油井的时候就求一下坐标的中位数，用最中间那口油井的 y 坐标；偶数口的时候在最中间的两个之间就行，包括边界值，所以随便在两口中间选一个输出y 坐标就满足要求</p>
+<p>求中位数就很简单了，排个序取在二分之一处的即可</p>
+<h2 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h2><p>在网上找了几篇资料学习了一下，获得了必要的知识</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/neutre/article/details/78065633">全排列的编码与解码——康托展开</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Hachi_Lin/article/details/89740057">排列的生成(二) —— 序数法</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/cpfeed/article/details/7376132">字典序法生成全排列算法的证明</a></li>
+</ul>
+<p>康托展开存在的证明</p>
+<p>$$n!​=n(n−1)!=<a href="n%E2%88%921">(n−1)+1</a>!=(n−1)(n−1)!+(n−1)!​$$<br>同理有<br>$$(n−1)!=(n−2)(n−2)!+(n−2)!$$</p>
+<p>不停地反复带入，就得到</p>
+<p>$$<br>\begin{aligned}​<br>n! &amp;=(n−1)(n−1)!+(n−2)(n−2)!+(n−2)! \<br>&amp;=(n−1)(n−1)!+(n−2)(n−2)!+(n−3)(n−3)!+⋯+2⋅2!+2!\<br>&amp;=∑^{n−1}<em>{k=1}​k⋅k!+1<br>\end{aligned}<br>​$$<br>$$<br>n!-1=∑^{n−1}</em>{k=1}​k⋅k!<br>$$</p>
+<p>可得到 0 到 n ! − 1的整数m可以唯一地表示为</p>
+<p>$$<br>m = a_{k−1}(k−1)! + a_{k−2}(k-2)! + ⋯ + a_2⋅2! + a_1 m​<br>$$</p>
+<p>其中 $a_i$​满足$0 ⩽ a_{i} ⩽ k, i=1,2, ⋯, k-1$</p>
+<p>所以可以证明 0 到 n!-1 的 n! 个整数和序数$(a_{n-1}, a_{n-2}, ⋯, a_{2}, a_{1})$一一对应。</p>
+<p>非常神奇的玩意儿，看上去像某种古怪的进制系统，每一位的权值和进位数都不一样</p>
+<p>写的时候代码里面利用了一些规律，需要写的东西少了很多</p>
+<p>字典序下一个就没什么好玩的了，老老实实照着抄</p>
+<h1 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h1><p>排序，从最小的开始累加，然后除总人数，输出就行了</p>
+<p>写得这么少也不好，推销一首歌 <a target="_blank" rel="noopener" href="https://youtu.be/52Qvmo6DSII">It’s a Pony Kind of Christmas</a> \wink</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2020/12/15/" data-id="ckir61f3n0000d8u7beu22k4f" data-title="几道题的解释" class="article-share-link">Teilen</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
     <article id="post-js 处理二进制数据" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2020/11/08/" class="article-date">
@@ -481,56 +550,6 @@
 
 
   
-    <article id="post-程序员必看纪录片" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/10/18/" class="article-date">
-  <time class="dt-published" datetime="2020-10-18T14:21:00.000Z" itemprop="datePublished">2020-10-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/10/18/">程序员必看纪录片</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>这个标题有歧义</p>
-<p>想看纪录片了，好奇有哪些关于从 0 开始数数的世界的纪录片，搜了搜，发现有一篇「10部程序员必看的纪录片」的文章在第一页搜索结果中占了多数席，打算先从这 10 部里挑些有趣的看看，其余类似主题的也放在这里</p>
-<h2 id="现代生活的秘密规则：算法"><a href="#现代生活的秘密规则：算法" class="headerlink" title="现代生活的秘密规则：算法"></a><a target="_blank" rel="noopener" href="https://www.acfun.cn/v/ac4985648">现代生活的秘密规则：算法</a></h2><p>里面说「稳定匹配算法」的一个实例是中国的高考志愿，我有空看看这是不是真的。<a target="_blank" rel="noopener" href="https://www.cnblogs.com/AndyJee/p/4947566.html">有人</a>对片中介绍的算法做了归纳。</p>
-<h2 id="操作系统革命"><a href="#操作系统革命" class="headerlink" title="操作系统革命"></a>操作系统革命</h2><p>并没有提到很多具体的技术，全篇只是在很空洞的夸自由世界的东西，很有趣的地方是纪录片（好像是世纪初）中说中国是个第三世界的国家，就影像资料来看，确实很难否认，大家不理发，打地铺睡公司，用着大屁股显示器，看的都是大部头，封面上有只小企鹅</p>
-<h2 id="独立游戏大电影"><a href="#独立游戏大电影" class="headerlink" title="独立游戏大电影"></a>独立游戏大电影</h2><p>好久以前白嫖过了，也许我该从 steam 上买一份？</p>
-<h2 id="代码奔腾"><a href="#代码奔腾" class="headerlink" title="代码奔腾"></a>代码奔腾</h2><p>看的时候没有看明白，原来影片最后是在表明失败的现实，我是不在乎这些的，不是说视而不见当这种失败不存在，而是觉得有点理想主义很不错，况且，也并非完全的失败。</p>
-<h2 id="Patent-Absurdity"><a href="#Patent-Absurdity" class="headerlink" title="Patent Absurdity"></a><a target="_blank" rel="noopener" href="https://bilibili.com/video/av15221360">Patent Absurdity</a></h2><p>毕达哥拉斯定理是个坏名字，勾股定理是个好名字；牛顿第一定律是个坏名字，经典力学第一定律是个好名字；爱因斯坦理论是个坏名字，相对论是个好名字；欧几里得算法是个坏名字，辗转相除法是个好名字；对于起好名字，程序员远比其他职业要在行，毕竟这是 ta们 的本职工作</p>
-<p>给你命名的权<del>力</del>利已很不错，竟然还有脸要专利，真是不成体统。</p>
-<p>我相信现在大多数人认为「通信的数学理论」是全人类共有的，而「<strong>一种</strong>通信的数学理论」就可以申请专利，这两者之间的区别在何处呢？我不知道，或许只有(1948-1971)年的差距罢了，从这个角度讲，对人类的贡献越大，专利期反而应该越短</p>
-<p>科学家还真是好打发啊，给个 物理单位、数学名词、元素名 就完事了，怪不得小时候大家都想当科学家</p>
-<h2 id="统计的乐趣"><a href="#统计的乐趣" class="headerlink" title="统计的乐趣"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av58376864/">统计的乐趣</a></h2><p>简单的介绍了一下统计学的用处以及两种常见的分布模型，讲者说起话来很有趣，我又去看了看他的 TED Talk</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://example.com/2020/10/18/" data-id="ckhrqxoqz000hvgu792tj42w9" data-title="程序员必看纪录片" class="article-share-link">Teilen</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -554,7 +573,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
     </div>
   </div>
 
@@ -565,6 +584,10 @@
     <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/12/15/">几道题的解释</a>
+          </li>
         
           <li>
             <a href="/2020/11/08/">js 处理二进制数据</a>
@@ -580,10 +603,6 @@
         
           <li>
             <a href="/2020/10/27/">就当花钱租教训</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/20/">Cisco Packet Tracer</a>
           </li>
         
       </ul>
