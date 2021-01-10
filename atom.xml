@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2020-12-16T08:40:50.002Z</updated>
+  <updated>2021-01-10T14:54:12.013Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -17,18 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>简易的信息聚合</title>
+    <link href="https://example.com/2021/01/10/"/>
+    <id>https://example.com/2021/01/10/</id>
+    <published>2021-01-10T14:29:32.000Z</published>
+    <updated>2021-01-10T14:54:12.013Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;写了一篇文章以后，我是有可能会更新的，但这种更新没办法在现在这个 rss 生成器里体现出来——它按照发布日期而非修改日期来排序文章。所以我修改了什么，从rss那里大概率啥也看不出来。简单讲我希望生成的 rss 能像 wiki 的「最近更改」一样，但是究竟什么样的修改才值得被</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>几道题的解释</title>
     <link href="https://example.com/2020/12/15/"/>
     <id>https://example.com/2020/12/15/</id>
     <published>2020-12-15T15:10:56.000Z</published>
-    <updated>2020-12-16T08:40:50.002Z</updated>
+    <updated>2021-01-10T14:25:19.929Z</updated>
     
     
       
       
     <summary type="html">&lt;p&gt;没啥好讲的，算法设计与分析的作业题，列一下给有缘人看&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://s3.ax1x.com/2020/12/15/rQ3GOx.png&quot; alt=&quot;题目&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;第一题&quot;&gt;&lt;a href=&quot;#第一题&quot; class=&quot;h</summary>
+&lt;h1 id=&quot;第一次作业&quot;&gt;&lt;a href=&quot;#第一次作业&quot; class=&quot;headerlink&quot; title=&quot;第一次作业&quot;&gt;&lt;/a&gt;第一次作业&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://s3.ax1</summary>
       
     
     
@@ -66,26 +83,6 @@
       
     <summary type="html">&lt;p&gt;上一篇里有一个特别长的表格，vscode 不知道为什么有自动换行，导致那个表格的源码看起来惨不忍睹，查了一会，发现可能是 markdown 格式被什么扩展自动改成自动换行了，找到&lt;code&gt;setting.json&lt;/code&gt;文件，改成这样&lt;/p&gt;
 &lt;figure cla</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>购买一个平板</title>
-    <link href="https://example.com/2020/10/29/"/>
-    <id>https://example.com/2020/10/29/</id>
-    <published>2020-10-29T14:37:03.000Z</published>
-    <updated>2020-12-13T14:38:08.196Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;今年桃饱网双十一活动已经开始了，我统计了一下名下的流动财产，打算买一个平板。&lt;/p&gt;
-&lt;h2 id=&quot;为什么要买&quot;&gt;&lt;a href=&quot;#为什么要买&quot; class=&quot;headerlink&quot; title=&quot;为什么要买&quot;&gt;&lt;/a&gt;为什么要买&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;带着一堆书上</summary>
       
     
     
