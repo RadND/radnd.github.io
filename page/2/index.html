@@ -67,10 +67,10 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://example.com"></form>
       </div>
     </div>
   </div>
@@ -78,6 +78,91 @@
 
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Cisco-Packet-Tracer" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/10/20/" class="article-date">
+  <time class="dt-published" datetime="2020-10-20T04:26:30.000Z" itemprop="datePublished">2020-10-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2020/10/20/">Cisco Packet Tracer</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>这学期修了一门「网络交换及路由技术」，要用到 Cisco Packet Tracer，群文件里只有大版本为 5 的，机房里的大版本是 6 ，我已经有学校邮箱了，看看最新版（出到大版本 7）怎么样。</p>
+<p><a target="_blank" rel="noopener" href="https://www.netacad.com/portal/node/488">下载地址</a>:用之前要注册一个思科网络学院的账号</p>
+<p>遇到了一些问题，路由器分的型号比较多，只有很有限的几个型号有串口(serial)，最后发现其实是因为我没有注意听讲，路由器是模块化的， 大部分型号的串口都要在配置界面的<code>Physical</code>框里手动安装模块获得，要想达到和实验指导书中相同的效果，需要特意安装在模块 0 插槽</p>
+<h2 id="路由器基本操作"><a href="#路由器基本操作" class="headerlink" title="路由器基本操作"></a>路由器基本操作</h2><h3 id="几种模式的特征"><a href="#几种模式的特征" class="headerlink" title="几种模式的特征"></a>几种模式的特征</h3><table>
+<thead>
+<tr>
+<th>特征</th>
+<th>名称</th>
+<th>状态转移到此模式的方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>(config-if)</code></td>
+<td>接口模式</td>
+<td>全局模式 <code>interface+接口类型+接口号</code>;在图形界面配置 ip 会自动切换到此状态</td>
+</tr>
+<tr>
+<td><code>(config)</code></td>
+<td>全局模式</td>
+<td>特权模式 <code>configure terminal</code></td>
+</tr>
+<tr>
+<td><code>#</code></td>
+<td>特权模式</td>
+<td>用户模式 <code>enable</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>用户模式</td>
+<td>特权模式 <code>disable</code> 理论上的初始状态，多按几下 <code>↵</code> 和 <code>Ctrl + Z</code> 也能到</td>
+</tr>
+<tr>
+<td><code>(config-line)</code></td>
+<td>线模式</td>
+<td>全局模式 <code>line+接口类型+接口号</code></td>
+</tr>
+<tr>
+<td><code>(config-router)</code></td>
+<td>路由模式</td>
+<td>全局模式配置任意路由协议</td>
+</tr>
+</tbody></table>
+<p>我很想把这部分改成状态转移图的样子，可惜 md 格式原生不支持</p>
+<p>路由器的命令并没有形成标准，事实标准是思科的这一套，华为的路由器操作有些许不同，不同在哪里，我不知道</p>
+<p>21/01/23 更新</p>
+<p>有个人总结的很齐全，看 <a target="_blank" rel="noopener" href="https://github.com/XUAN-CW/guetNetworkSwitchingAndRouting2020">ta 的版本</a> 吧，我就把这里记得不全的删掉了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://example.com/2020/10/20/" data-id="ckhrqxoqp0007vgu70es7bnic" data-title="Cisco Packet Tracer" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
   
     <article id="post-找零货币问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
@@ -114,7 +199,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://example.com/2020/10/19/" data-id="ckhrqxoqu000dvgu72ftjbd1l" data-title="找零货币问题" class="article-share-link">Teilen</a>
+      <a data-url="https://example.com/2020/10/19/" data-id="ckhrqxoqu000dvgu72ftjbd1l" data-title="找零货币问题" class="article-share-link">Share</a>
       
       
       
@@ -164,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://example.com/2020/10/18/" data-id="ckhrqxoqz000hvgu792tj42w9" data-title="程序员必看纪录片" class="article-share-link">Teilen</a>
+      <a data-url="https://example.com/2020/10/18/" data-id="ckhrqxoqz000hvgu792tj42w9" data-title="程序员必看纪录片" class="article-share-link">Share</a>
       
       
       
@@ -216,7 +301,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://example.com/2020/10/17/" data-id="ckhrqxoqy000fvgu7043i8xhu" data-title="开评论" class="article-share-link">Teilen</a>
+      <a data-url="https://example.com/2020/10/17/" data-id="ckhrqxoqy000fvgu7043i8xhu" data-title="开评论" class="article-share-link">Share</a>
       
       
       
@@ -260,7 +345,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://example.com/2020/10/16/" data-id="ckhrqxoqy000evgu77ey2fkmh" data-title="惊天雷" class="article-share-link">Teilen</a>
+      <a data-url="https://example.com/2020/10/16/" data-id="ckhrqxoqy000evgu77ey2fkmh" data-title="惊天雷" class="article-share-link">Share</a>
       
       
       
@@ -328,7 +413,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://example.com/2020/10/15/" data-id="ckhrqxoqz000gvgu7gcxl1uh1" data-title="新标签页扩展" class="article-share-link">Teilen</a>
+      <a data-url="https://example.com/2020/10/15/" data-id="ckhrqxoqz000gvgu7gcxl1uh1" data-title="新标签页扩展" class="article-share-link">Share</a>
       
       
       
@@ -377,54 +462,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://example.com/2020/10/14/" data-id="ckhrqxoqo0005vgu701wz4z3a" data-title="Hold E to pull up {name}" class="article-share-link">Teilen</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-下午两点过五分到两点半的树阴" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/10/13/" class="article-date">
-  <time class="dt-published" datetime="2020-10-13T13:43:56.000Z" itemprop="datePublished">2020-10-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/10/13/">下午两点过五分到两点半的树阴</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>这篇短文主要发表了对学校基建的负面意见，所以不只是植树计划的问题，不过每当我去上下午第一节课的时候，植树计划的问题确实是最大的问题</p>
-<p>桂林的天气像个布尔值，如果东南沿海地区没有刮台风，天气就是特别毒辣的太阳，如果刮台风，天气就是以短暂的阴天为间隔的大雨，如果钻牛角尖，认为会有闪电劈到山上的雨和让人没有干袜子穿的雨是两种不同的天气，那就算三种。</p>
-<p>假设你是个吸血鬼，从宿舍到校门口这么走一趟，就知道校园哪里该栽树了，很可惜，制定植树计划的生物里没有吸血鬼。</p>
-<blockquote>
-<p>想到这里我气得浑身发抖，大热天的全身冷汗手脚冰凉，这个社会还能不能好了，吸血鬼何时才能真正的站起来。</p>
-</blockquote>
-<p>艳阳天里就连走路去上课也像是某种试炼，非常令人不爽的是下课回来的时候还能看见工人们在别的地方种树。</p>
-<p>这几天在下雨，所以我没什么要抱怨太阳的了，说点别的，图书馆的开水机，看着快坏了，三教不知道为什么总是特别热，风扇还偏偏开了也不转，等我以后发达了，一定给学校捐笔钱，专门指定用于图书馆和教学楼的基础设施维修工作</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://example.com/2020/10/13/" data-id="ckhrqxoqr0009vgu7e8ir22k9" data-title="下午两点过五分到两点半的树阴" class="article-share-link">Teilen</a>
+      <a data-url="https://example.com/2020/10/14/" data-id="ckhrqxoqo0005vgu701wz4z3a" data-title="Hold E to pull up {name}" class="article-share-link">Share</a>
       
       
       
@@ -441,7 +479,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">weiter &raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -458,7 +496,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
     </div>
@@ -468,9 +506,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/01/23/">dotnetmvc</a>
+          </li>
         
           <li>
             <a href="/2021/01/10/">简易的信息聚合</a>
@@ -486,10 +528,6 @@
         
           <li>
             <a href="/2020/11/02/">vscode 自动换行</a>
-          </li>
-        
-          <li>
-            <a href="/2020/10/29/">购买一个平板</a>
           </li>
         
       </ul>

@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2021-01-10T14:54:12.013Z</updated>
+  <updated>2021-01-23T15:02:13.561Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -17,16 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>dotnetmvc</title>
+    <link href="https://example.com/2021/01/23/"/>
+    <id>https://example.com/2021/01/23/</id>
+    <published>2021-01-23T14:18:15.000Z</published>
+    <updated>2021-01-23T15:02:13.561Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这门课差点挂了，看着 vs 里面一堆解决方案占空，如果放网盘里造福后人又得挨个删依赖拷源码，太麻烦就算了，总结一下这门课教什么就删掉&lt;/p&gt;
+&lt;h2 id=&quot;通用流程&quot;&gt;&lt;a href=&quot;#通用流程&quot; class=&quot;headerlink&quot; title=&quot;通用流程&quot;&gt;&lt;/a&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>简易的信息聚合</title>
     <link href="https://example.com/2021/01/10/"/>
     <id>https://example.com/2021/01/10/</id>
     <published>2021-01-10T14:29:32.000Z</published>
-    <updated>2021-01-10T14:54:12.013Z</updated>
+    <updated>2021-01-23T15:02:28.866Z</updated>
     
     
       
       
-    <summary type="html">&lt;p&gt;写了一篇文章以后，我是有可能会更新的，但这种更新没办法在现在这个 rss 生成器里体现出来——它按照发布日期而非修改日期来排序文章。所以我修改了什么，从rss那里大概率啥也看不出来。简单讲我希望生成的 rss 能像 wiki 的「最近更改」一样，但是究竟什么样的修改才值得被</summary>
+    <summary type="html">&lt;p&gt;写了一篇文章以后，我是有可能会更新的，但这种更新没办法在现在这个 rss 生成器里体现出来——它按照发布日期而非修改日期来排序文章。所以我修改了什么，从 rss 那里大概率啥也看不出来。简单讲我希望生成的 rss 能像 wiki 的「最近更改」一样，但是究竟什么样的修改才值</summary>
       
     
     
@@ -64,25 +83,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;第一层需求&quot;&gt;&lt;a href=&quot;#第一层需求&quot; class=&quot;headerlink&quot; title=&quot;第一层需求&quot;&gt;&lt;/a&gt;第一层需求&lt;/h2&gt;&lt;p&gt;之前（大概是一年以内），我在玩用 RPG Maker 所制作的游戏，没有加密，但图片素材全部都被打包成了&lt;code&gt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vscode 自动换行</title>
-    <link href="https://example.com/2020/11/02/"/>
-    <id>https://example.com/2020/11/02/</id>
-    <published>2020-11-02T10:15:18.000Z</published>
-    <updated>2020-11-14T07:07:22.311Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;上一篇里有一个特别长的表格，vscode 不知道为什么有自动换行，导致那个表格的源码看起来惨不忍睹，查了一会，发现可能是 markdown 格式被什么扩展自动改成自动换行了，找到&lt;code&gt;setting.json&lt;/code&gt;文件，改成这样&lt;/p&gt;
-&lt;figure cla</summary>
       
     
     

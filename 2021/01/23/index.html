@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>找零货币问题 | 一〇五曲柄中的雨</title>
+  <title>dotnetmvc | 一〇五曲柄中的雨</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="在美国，就像在大多数国家一样，给任何总数的零钱最好的方法是使用一个贪婪的策略——找到面额最大但少于总数的硬币，给其中一个，然后重复。例如，在美国，支付给一个人 97 美分的现金，照此策略 会得出找零 50*1 + 25*1 + 5*2 + 1*2 的方法给出的硬币总数最少 然而，也有可能出现这种贪婪策略并不总是适用的硬币系统。例如，在一个奇怪的国家里，居民们出于某种奇怪的原因，决定使用 1、12、">
+  <meta name="description" content="这门课差点挂了，看着 vs 里面一堆解决方案占空，如果放网盘里造福后人又得挨个删依赖拷源码，太麻烦就算了，总结一下这门课教什么就删掉 通用流程大致就简单介绍了一下后端的东西，一个网络请求到了服务器会不可避免地先经过路由组件，解析 url 并分配到对应的处理程序，在 .net mvc 里处理程序指的就是 controller 类的各种方法，这些方法可能会和数据库交互，这部分按理说也是放哪种服务器都一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="找零货币问题">
-<meta property="og:url" content="https://example.com/2020/10/19/index.html">
+<meta property="og:title" content="dotnetmvc">
+<meta property="og:url" content="https://example.com/2021/01/23/index.html">
 <meta property="og:site_name" content="一〇五曲柄中的雨">
-<meta property="og:description" content="在美国，就像在大多数国家一样，给任何总数的零钱最好的方法是使用一个贪婪的策略——找到面额最大但少于总数的硬币，给其中一个，然后重复。例如，在美国，支付给一个人 97 美分的现金，照此策略 会得出找零 50*1 + 25*1 + 5*2 + 1*2 的方法给出的硬币总数最少 然而，也有可能出现这种贪婪策略并不总是适用的硬币系统。例如，在一个奇怪的国家里，居民们出于某种奇怪的原因，决定使用 1、12、">
+<meta property="og:description" content="这门课差点挂了，看着 vs 里面一堆解决方案占空，如果放网盘里造福后人又得挨个删依赖拷源码，太麻烦就算了，总结一下这门课教什么就删掉 通用流程大致就简单介绍了一下后端的东西，一个网络请求到了服务器会不可避免地先经过路由组件，解析 url 并分配到对应的处理程序，在 .net mvc 里处理程序指的就是 controller 类的各种方法，这些方法可能会和数据库交互，这部分按理说也是放哪种服务器都一">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-10-19T14:55:17.000Z">
-<meta property="article:modified_time" content="2020-10-26T06:09:50.004Z">
+<meta property="article:published_time" content="2021-01-23T14:18:15.000Z">
+<meta property="article:modified_time" content="2021-01-23T15:02:13.561Z">
 <meta property="article:author" content="Rad 面">
 <meta name="twitter:card" content="summary">
   
@@ -81,10 +81,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-找零货币问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-dotnetmvc" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2020/10/19/" class="article-date">
-  <time class="dt-published" datetime="2020-10-19T14:55:17.000Z" itemprop="datePublished">2020-10-19</time>
+    <a href="/2021/01/23/" class="article-date">
+  <time class="dt-published" datetime="2021-01-23T14:18:15.000Z" itemprop="datePublished">2021-01-23</time>
 </a>
     
   </div>
@@ -95,7 +95,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      找零货币问题
+      dotnetmvc
     </h1>
   
 
@@ -103,20 +103,22 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <blockquote><p>在美国，就像在大多数国家一样，给任何总数的零钱最好的方法是使用一个贪婪的策略——找到面额最大但少于总数的硬币，给其中一个，然后重复。例如，在美国，支付给一个人 97 美分的现金，照此策略 会得出找零 50*1 + 25*1 + 5*2 + 1*2 的方法给出的硬币总数最少</p>
-<p>然而，也有可能出现这种贪婪策略并不总是适用的硬币系统。例如，在一个奇怪的国家里，居民们出于某种奇怪的原因，决定使用 1、12、14、63 的面值。假设你需要返还 24 美分。最好的方法是返还 2 枚 12 美分的硬币。然而，在贪心策略下，总是选择面额小于总数的最大硬币，你会选择一个 14 美分的硬币和 10 个 1 美分的硬币，总共 15 个硬币。</p>
-<footer><strong>Serence</strong><cite><a target="_blank" rel="noopener" href="https://blog.blinkstar.cn/post/yi-wen-nong-dong-di-guia">一文弄懂递归</a></cite></footer></blockquote>
-
-<p>我有个疑问：在货币面值满足哪些条件的时候，贪心法总是能得到硬币数量最少的一种方案？充分或必要条件都行。</p>
-<p>1、4、5、10 付 8 ， 5 1 1 1 或 4 4 </p>
-<p>我的假设是在最大（但小于要付）的面值大于要付的钱数的一半时，如果有较小面值与要付的钱数不互质，就会发生这种情况</p>
-<p>似乎是正确的，但是怎么证明呢？而且这个假设似乎只在存在面值为 1 的硬币的情况下成立</p>
-<p>变成子问题？ 5 付 8 到 1 付 3 。4 付 8 到 4 付 4 。这种性质具有传递性，18 会导致 10 付 18 到 1、4、5 付<br> 8</p>
+        <p>这门课差点挂了，看着 vs 里面一堆解决方案占空，如果放网盘里造福后人又得挨个删依赖拷源码，太麻烦就算了，总结一下这门课教什么就删掉</p>
+<h2 id="通用流程"><a href="#通用流程" class="headerlink" title="通用流程"></a>通用流程</h2><p>大致就简单介绍了一下后端的东西，一个网络请求到了服务器会不可避免地先经过<strong>路由组件</strong>，解析 url 并分配到对应的<strong>处理程序</strong>，在 .net mvc 里处理程序指的就是 controller 类的各种方法，这些方法可能会和<strong>数据库</strong>交互，这部分按理说也是放哪种服务器都一样，数据库连接，数据库上下文，数据库游标……数据库披萨[doge]</p>
+<h2 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h2><p>老师直接给了两个 dll，让添加到引用里。用来和数据库互动的，我用了会出版本不符的问题，好在有位朋友帮忙，教我用 nuget 包管理器（这段话听起来很像广告，可能是因为提到了具体的包管理器的名字，不过应该也没有其它的吧）。装最新版的 EntityFramework 就能用了。</p>
+<h2 id="安全验证"><a href="#安全验证" class="headerlink" title="安全验证"></a>安全验证</h2><p>要手动改 web.config ，加上允许表单验证。这段正好实验课没听到，花了我两天没搞明白，后来又去问老师，然后又查的文档才改对地方，那个 cookie 到底怎么和这些语句联系起来的还是搞不清楚，有点不高兴</p>
+<h2 id="个人意见"><a href="#个人意见" class="headerlink" title="个人意见"></a>个人意见</h2><p>controller 的注解很有趣，我以前仅仅是听说过这东西，实际用起来相当舒服，就是给参数的方式不习惯，为啥不能做成和函数调用一样呢，省点脑细胞。</p>
+<p>无参数的注解，确实给人一种介于注释和代码间的感觉。</p>
+<p>我挺讨厌模板的，主要是觉得“不干净”，之前看到 jsp 的时候就是这样,和一门新的语言没啥区别，还是前端 js ajax、fetch 拉数据好，废不了多少时间。hexo 也是模板，好在没有特殊需求的时候我不需要打开井盖去看那部分东西</p>
+<p>而且我不知道同时传两个强类型对象给 view 的方法，搞得遇到这种情况的时候得放一个在viewbag 里，用的时候强制类型转换（声明类型），所以更讨厌了</p>
+<p>模型？不用 sql 而用 c# 描述数据模型，有点非关系型数据库的建模的感觉，话说 curd 也不用写 sql ，挺爽的，不知道实现具体做了什么。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>懵懵懂懂的，结课了也没学懂多少，没兴趣了，感觉 mvc 这种模式并不好，三者之间互动的语言不是同一种，而且模型就真的是模型了，自己没有方法，一点面向对象的思路都没有，还有各种我想要列出但想不出的缺点，反正这东西不好使，我不想继续学就对了。</p>
+<p>写完了，这就删库跑路。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://example.com/2020/10/19/" data-id="ckhrqxoqu000dvgu72ftjbd1l" data-title="找零货币问题" class="article-share-link">Share</a>
+      <a data-url="https://example.com/2021/01/23/" data-id="ckk9u6j9z0000vgu78vrib1py" data-title="dotnetmvc" class="article-share-link">Share</a>
       
       
       
@@ -126,19 +128,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/10/20/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Cisco Packet Tracer
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/10/18/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/01/10/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">程序员必看纪录片</div>
+      <div class="article-nav-title">简易的信息聚合</div>
     </a>
   
 </nav>
@@ -164,7 +157,7 @@
         repo: 'page-comments',
         owner: 'radnd',
         admin: ['radnd'],
-        id: 'https://example.com/2020/10/19/',
+        id: 'https://example.com/2021/01/23/',
         distractionFreeMode: false
     }).render('gitalk-container')
 </script>
