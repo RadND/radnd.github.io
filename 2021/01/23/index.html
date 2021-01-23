@@ -14,7 +14,7 @@
 <meta property="og:description" content="这门课差点挂了，看着 vs 里面一堆解决方案占空，如果放网盘里造福后人又得挨个删依赖拷源码，太麻烦就算了，总结一下这门课教什么就删掉 通用流程大致就简单介绍了一下后端的东西，一个网络请求到了服务器会不可避免地先经过路由组件，解析 url 并分配到对应的处理程序，在 .net mvc 里处理程序指的就是 controller 类的各种方法，这些方法可能会和数据库交互，这部分按理说也是放哪种服务器都一">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-01-23T14:18:15.000Z">
-<meta property="article:modified_time" content="2021-01-23T15:02:13.561Z">
+<meta property="article:modified_time" content="2021-01-23T15:16:59.609Z">
 <meta property="article:author" content="Rad 面">
 <meta name="twitter:card" content="summary">
   
@@ -106,7 +106,9 @@
         <p>这门课差点挂了，看着 vs 里面一堆解决方案占空，如果放网盘里造福后人又得挨个删依赖拷源码，太麻烦就算了，总结一下这门课教什么就删掉</p>
 <h2 id="通用流程"><a href="#通用流程" class="headerlink" title="通用流程"></a>通用流程</h2><p>大致就简单介绍了一下后端的东西，一个网络请求到了服务器会不可避免地先经过<strong>路由组件</strong>，解析 url 并分配到对应的<strong>处理程序</strong>，在 .net mvc 里处理程序指的就是 controller 类的各种方法，这些方法可能会和<strong>数据库</strong>交互，这部分按理说也是放哪种服务器都一样，数据库连接，数据库上下文，数据库游标……数据库披萨[doge]</p>
 <h2 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h2><p>老师直接给了两个 dll，让添加到引用里。用来和数据库互动的，我用了会出版本不符的问题，好在有位朋友帮忙，教我用 nuget 包管理器（这段话听起来很像广告，可能是因为提到了具体的包管理器的名字，不过应该也没有其它的吧）。装最新版的 EntityFramework 就能用了。</p>
-<h2 id="安全验证"><a href="#安全验证" class="headerlink" title="安全验证"></a>安全验证</h2><p>要手动改 web.config ，加上允许表单验证。这段正好实验课没听到，花了我两天没搞明白，后来又去问老师，然后又查的文档才改对地方，那个 cookie 到底怎么和这些语句联系起来的还是搞不清楚，有点不高兴</p>
+<h2 id="安全验证"><a href="#安全验证" class="headerlink" title="安全验证"></a>安全验证</h2><p>要手动改 web.config ，加上允许表单验证。这段正好实验课没听到，花了我两天没搞明白，后来又去问老师，然后又查的文档才改对地方，那个 cookie 到底怎么 把/和 这两部分语句联系起来的还是搞不清楚，有点不高兴</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一处</span></span><br><span class="line">FormsAuthentication.SetAuthCookie(login.UserName, <span class="literal">false</span>);</span><br><span class="line"><span class="comment">//第二处</span></span><br><span class="line"><span class="keyword">string</span> username = HttpContext.User.Identity.Name;</span><br><span class="line"><span class="keyword">var</span> result = db.Users.SingleOrDefault&lt;User&gt;(u =&gt; u.UserName == username);</span><br></pre></td></tr></table></figure>
+
 <h2 id="个人意见"><a href="#个人意见" class="headerlink" title="个人意见"></a>个人意见</h2><p>controller 的注解很有趣，我以前仅仅是听说过这东西，实际用起来相当舒服，就是给参数的方式不习惯，为啥不能做成和函数调用一样呢，省点脑细胞。</p>
 <p>无参数的注解，确实给人一种介于注释和代码间的感觉。</p>
 <p>我挺讨厌模板的，主要是觉得“不干净”，之前看到 jsp 的时候就是这样,和一门新的语言没啥区别，还是前端 js ajax、fetch 拉数据好，废不了多少时间。hexo 也是模板，好在没有特殊需求的时候我不需要打开井盖去看那部分东西</p>
