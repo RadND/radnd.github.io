@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2021-02-06T10:46:33.862Z</updated>
+  <updated>2021-03-02T10:37:00.643Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>阅读的历史记录</title>
+    <link href="https://example.com/2021/03/02/"/>
+    <id>https://example.com/2021/03/02/</id>
+    <published>2021-03-02T10:13:44.000Z</published>
+    <updated>2021-03-02T10:37:00.643Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这学期有门必修课《软件工程导论》，刚上完第一节课。按老师的意思，最后要用在课程中学到的方法做点东西出来，我确实想做点东西出来，也就是对每本读过的书的记录。目前这种东西只存在于我电脑桌面上的一个 execl 表格里，我很久没有改动它的意图了。&lt;/p&gt;
+&lt;p&gt;我打算用 Java</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>尝没尝过？</title>
     <link href="https://example.com/2021/02/06/"/>
     <id>https://example.com/2021/02/06/</id>
     <published>2021-02-06T10:33:11.000Z</published>
-    <updated>2021-02-06T10:46:33.862Z</updated>
+    <updated>2021-02-13T16:56:47.812Z</updated>
     
     
       
@@ -64,25 +83,6 @@
       
       
     <summary type="html">&lt;p&gt;写了一篇文章以后，我是有可能会更新的，但这种更新没办法在现在这个 rss 生成器里体现出来——它按照发布日期而非修改日期来排序文章。所以我修改了什么，从 rss 那里大概率啥也看不出来。简单讲我希望生成的 rss 能像 wiki 的「最近更改」一样，但是究竟什么样的修改才值</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>几道题的解释</title>
-    <link href="https://example.com/2020/12/15/"/>
-    <id>https://example.com/2020/12/15/</id>
-    <published>2020-12-15T15:10:56.000Z</published>
-    <updated>2021-01-10T14:25:19.929Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;没啥好讲的，算法设计与分析的作业题，列一下给有缘人看&lt;/p&gt;
-&lt;h1 id=&quot;第一次作业&quot;&gt;&lt;a href=&quot;#第一次作业&quot; class=&quot;headerlink&quot; title=&quot;第一次作业&quot;&gt;&lt;/a&gt;第一次作业&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://s3.ax1</summary>
       
     
     
