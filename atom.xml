@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2021-03-02T10:37:00.643Z</updated>
+  <updated>2021-03-03T11:04:20.193Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://example.com/2021/03/02/"/>
     <id>https://example.com/2021/03/02/</id>
     <published>2021-03-02T10:13:44.000Z</published>
-    <updated>2021-03-02T10:37:00.643Z</updated>
+    <updated>2021-03-03T11:04:20.193Z</updated>
     
     
       
       
-    <summary type="html">&lt;p&gt;这学期有门必修课《软件工程导论》，刚上完第一节课。按老师的意思，最后要用在课程中学到的方法做点东西出来，我确实想做点东西出来，也就是对每本读过的书的记录。目前这种东西只存在于我电脑桌面上的一个 execl 表格里，我很久没有改动它的意图了。&lt;/p&gt;
-&lt;p&gt;我打算用 Java</summary>
+    <summary type="html">&lt;p&gt;这学期有门必修课《软件工程》，刚上完第一节课。按老师的意思，最后要用在课程中学到的方法做点东西出来，我确实想做点东西出来，也就是对每本读过的书的记录。目前这种东西只存在于我电脑桌面上的一个 execl 表格里，我很久没有改动它的意图了。&lt;/p&gt;
+&lt;p&gt;我打算用 Java 写</summary>
       
     
     
