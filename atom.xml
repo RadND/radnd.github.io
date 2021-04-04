@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2021-03-31T04:41:22.636Z</updated>
+  <updated>2021-04-04T15:03:02.254Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读书笔记 - MongoDB实战(第二版)</title>
+    <link href="https://example.com/2021/04/04/"/>
+    <id>https://example.com/2021/04/04/</id>
+    <published>2021-04-04T13:59:32.000Z</published>
+    <updated>2021-04-04T15:03:02.254Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这本书快过借阅期限了，不打算再续借，所以暂时不写作业了，把这书再读一读。&lt;/p&gt;
+&lt;p&gt;NoSQL 的本意是 Not Only SQL ，不过我看这本书的时候感受到的最大的不同确实是 No SQL ，众所周知数据库里存的东西拿到程序里来总是会变成一个一个对象，所以即便数据库</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>使用 PowerShell 开关触摸屏</title>
@@ -65,25 +84,6 @@
       
       
     <summary type="html">&lt;p&gt;刚刚非常偶然地想到最近最出名的饿死人的事，然后发觉我很可能没吃过杏子，一提到杏，首先想到的不是水果，反倒是对氰化物味道的描述——估计是受《福尔摩斯探案集》的影响。车厘子没吃过可以理解，杏应该是本土种植的东西，为啥我没吃过呢？（或者吃过但记忆中没有，反正说明就是很少见）这真够</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>dotnetmvc</title>
-    <link href="https://example.com/2021/01/23/"/>
-    <id>https://example.com/2021/01/23/</id>
-    <published>2021-01-23T14:18:15.000Z</published>
-    <updated>2021-01-23T15:16:59.609Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这门课差点挂了，看着 vs 里面一堆解决方案占空，如果放网盘里造福后人又得挨个删依赖拷源码，太麻烦就算了，总结一下这门课教什么就删掉&lt;/p&gt;
-&lt;h2 id=&quot;通用流程&quot;&gt;&lt;a href=&quot;#通用流程&quot; class=&quot;headerlink&quot; title=&quot;通用流程&quot;&gt;&lt;/a&gt;</summary>
       
     
     
