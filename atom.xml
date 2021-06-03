@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2021-04-04T15:03:02.254Z</updated>
+  <updated>2021-05-04T14:17:48.919Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android Room</title>
+    <link href="https://example.com/2021/05/04/"/>
+    <id>https://example.com/2021/05/04/</id>
+    <published>2021-05-04T10:11:04.000Z</published>
+    <updated>2021-05-04T14:17:48.919Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;RoomDatabase&quot;&gt;&lt;a href=&quot;#RoomDatabase&quot; class=&quot;headerlink&quot; title=&quot;RoomDatabase&quot;&gt;&lt;/a&gt;RoomDatabase&lt;/h2&gt;&lt;p&gt;一个单例类，供应用全局使用&lt;/p&gt;
+&lt;h2 id=&quot;Obje</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>载具系统</title>
+    <link href="https://example.com/2021/04/30/"/>
+    <id>https://example.com/2021/04/30/</id>
+    <published>2021-04-30T15:42:07.000Z</published>
+    <updated>2021-04-30T15:42:07.969Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>读书笔记 - MongoDB实战(第二版)</title>
@@ -47,43 +79,6 @@
       
     <summary type="html">&lt;p&gt;我这个平板到货有一段时间了，由于电池容量在出厂容量的 80% 出头，所以本着能省的电尽量省一省的想法，我把主意打到了触摸屏上面，立在桌面上用键盘的时候就从设备管理器里把它关掉，要换成平板的时候再重新开启。虽然不知道是不是真的能省电，但是心理安慰总是有的。&lt;/p&gt;
 &lt;p&gt;这样</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>阅读的历史记录</title>
-    <link href="https://example.com/2021/03/02/"/>
-    <id>https://example.com/2021/03/02/</id>
-    <published>2021-03-02T10:13:44.000Z</published>
-    <updated>2021-03-03T11:06:57.596Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这学期有门必修课《软件工程》，刚上完第一节课。按老师的意思，最后要用在课程中学到的方法做点东西出来，我确实想做点东西出来记录每本读过的书。目前这种东西只存在于我电脑桌面上的一个 execl 表格里，很久没有动过了。&lt;/p&gt;
-&lt;p&gt;我打算用 Java 写一个 Android </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>尝没尝过？</title>
-    <link href="https://example.com/2021/02/06/"/>
-    <id>https://example.com/2021/02/06/</id>
-    <published>2021-02-06T10:33:11.000Z</published>
-    <updated>2021-02-13T16:56:47.812Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;刚刚非常偶然地想到最近最出名的饿死人的事，然后发觉我很可能没吃过杏子，一提到杏，首先想到的不是水果，反倒是对氰化物味道的描述——估计是受《福尔摩斯探案集》的影响。车厘子没吃过可以理解，杏应该是本土种植的东西，为啥我没吃过呢？（或者吃过但记忆中没有，反正说明就是很少见）这真够</summary>
       
     
     

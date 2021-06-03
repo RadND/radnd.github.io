@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>🔥車阝艮彳亍 | 一〇五曲柄中的雨</title>
+  <title>Android Room | 一〇五曲柄中的雨</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="正文有朋友问我这个昵称有什么说法，我是觉得很有意思（以至于域名都租的这个），这四个字可以有很多种解释方法，而且都很合理 也许火车的保有量上升了，或者铁路缩水了，导致火车也需要单双号限行 也许只是有个地方，那里的汽车叫火车，火车叫汽车，所以那里的（这儿叫）汽车特别快，（这儿叫）火车反而慢 也许这个昵称隐含着一个意思，表明昵称使用者不喜欢回答电车问题 也许火车能飞，因为航空管制的缘故，火车要限行 也许">
+  <meta name="description" content="RoomDatabase一个单例类，供应用全局使用 ObjectDao添加注解后成为 有关 CURD 的方法描述 Object添加注解后成为 对数据库中一行数据的映射 LiveDataCURD 操作都需要更新视图，本质上是因为数据变更 DRY：异步监听数据变更，使得更新视图的方法只需写出一次 AsyncTask数据库操作被假定为非常耗时，因此不建议在主线程中使用，对于每个 CURD 操作生成一个单">
 <meta property="og:type" content="article">
-<meta property="og:title" content="🔥車阝艮彳亍">
-<meta property="og:url" content="https://example.com/2020/10/12/index.html">
+<meta property="og:title" content="Android Room">
+<meta property="og:url" content="https://example.com/2021/05/04/index.html">
 <meta property="og:site_name" content="一〇五曲柄中的雨">
-<meta property="og:description" content="正文有朋友问我这个昵称有什么说法，我是觉得很有意思（以至于域名都租的这个），这四个字可以有很多种解释方法，而且都很合理 也许火车的保有量上升了，或者铁路缩水了，导致火车也需要单双号限行 也许只是有个地方，那里的汽车叫火车，火车叫汽车，所以那里的（这儿叫）汽车特别快，（这儿叫）火车反而慢 也许这个昵称隐含着一个意思，表明昵称使用者不喜欢回答电车问题 也许火车能飞，因为航空管制的缘故，火车要限行 也许">
+<meta property="og:description" content="RoomDatabase一个单例类，供应用全局使用 ObjectDao添加注解后成为 有关 CURD 的方法描述 Object添加注解后成为 对数据库中一行数据的映射 LiveDataCURD 操作都需要更新视图，本质上是因为数据变更 DRY：异步监听数据变更，使得更新视图的方法只需写出一次 AsyncTask数据库操作被假定为非常耗时，因此不建议在主线程中使用，对于每个 CURD 操作生成一个单">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-10-12T06:12:24.000Z">
-<meta property="article:modified_time" content="2020-11-14T07:41:20.313Z">
+<meta property="article:published_time" content="2021-05-04T10:11:04.000Z">
+<meta property="article:modified_time" content="2021-05-04T14:17:48.919Z">
 <meta property="article:author" content="Rad 面">
 <meta name="twitter:card" content="summary">
   
@@ -81,10 +81,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-🔥車阝艮彳亍" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-Android-Room" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2020/10/12/" class="article-date">
-  <time class="dt-published" datetime="2020-10-12T06:12:24.000Z" itemprop="datePublished">2020-10-12</time>
+    <a href="/2021/05/04/" class="article-date">
+  <time class="dt-published" datetime="2021-05-04T10:11:04.000Z" itemprop="datePublished">2021-05-04</time>
 </a>
     
   </div>
@@ -95,7 +95,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      🔥車阝艮彳亍
+      Android Room
     </h1>
   
 
@@ -103,23 +103,30 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>有朋友问我这个昵称有什么说法，我是觉得很有意思（以至于域名都租的这个），这四个字可以有很多种解释方法，而且都很合理</p>
-<p>也许火车的保有量上升了，或者铁路缩水了，导致火车也需要单双号限行</p>
-<p>也许只是有个地方，那里的汽车叫火车，火车叫汽车，所以那里的（这儿叫）汽车特别快，（这儿叫）火车反而慢</p>
-<p>也许这个昵称隐含着一个意思，表明昵称使用者不喜欢回答电车问题</p>
-<p>也许火车能飞，因为航空管制的缘故，火车要限行</p>
-<p>也许铁路周围的人害怕火车的噪音会惊吓到他们的老祖宗，火车只好限行了，这很有趣，你知道吗，清朝已经灭亡 108 年了</p>
-<p>也许动车出现了，于是绿皮车会限行</p>
-<p>也许有阿姨在洗铁路，所以火车得限行</p>
-<p>也许大雨把铁路冲垮了，火车要限行</p>
-<p>也许有个人像笑话里讲的那样，准备被火车撞一下，然后爬起来喊：“下一辆”</p>
-<p>也许火车经过会导致周围区域掉帧严重，所以火车从这一区域被移除了</p>
-<p>也许像笑话里讲的那样，火车上的人正在讨论要不要为火车司机恢复名誉</p>
+        <h2 id="RoomDatabase"><a href="#RoomDatabase" class="headerlink" title="RoomDatabase"></a>RoomDatabase</h2><p>一个单例类，供应用全局使用</p>
+<h2 id="ObjectDao"><a href="#ObjectDao" class="headerlink" title="ObjectDao"></a>ObjectDao</h2><p>添加注解后成为 有关 CURD 的方法描述</p>
+<h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><p>添加注解后成为 对数据库中一行数据的映射</p>
+<h2 id="LiveData"><a href="#LiveData" class="headerlink" title="LiveData"></a>LiveData</h2><p>CURD 操作都需要更新视图，本质上是因为数据变更</p>
+<p>DRY：异步监听数据变更，使得更新视图的方法只需写出一次</p>
+<h2 id="AsyncTask"><a href="#AsyncTask" class="headerlink" title="AsyncTask"></a>AsyncTask</h2><p>数据库操作被假定为非常耗时，因此不建议在主线程中使用，对于每个 CURD 操作生成一个单例类，用以隐藏其余线程</p>
+<h2 id="ObjectViewModel"><a href="#ObjectViewModel" class="headerlink" title="ObjectViewModel"></a>ObjectViewModel</h2><p>ViewModel 负责管理界面的数据，精简 Activity</p>
+<h2 id="ObjectRepository"><a href="#ObjectRepository" class="headerlink" title="ObjectRepository"></a>ObjectRepository</h2><p>ViewModel 不应看到增删查改的具体实现 ———— ObjectDao RoomDatabase AsyncTask 等，这些类被隐藏在 ObjectRepository 后</p>
+<p>Repository 具体以何种方式取得数据（网络，本地数据库，随机生成，等），ViewModel 不可见</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="数据库相关"><a href="#数据库相关" class="headerlink" title="数据库相关"></a>数据库相关</h2><ul>
+<li>Database</li>
+<li>Object</li>
+<li>ObjectDao</li>
+</ul>
+<h2 id="界面相关"><a href="#界面相关" class="headerlink" title="界面相关"></a>界面相关</h2><ul>
+<li>LiveData</li>
+<li>Activity</li>
+<li>ObjectViewModel</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://example.com/2020/10/12/" data-id="ckhrqxor1000jvgu709zfewxx" data-title="🔥車阝艮彳亍" class="article-share-link">Compartir</a>
+      <a data-url="https://example.com/2021/05/04/" data-id="ckph2tjfm0001hgu7clgvhp05" data-title="Android Room" class="article-share-link">Compartir</a>
       
       
       
@@ -129,19 +136,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/10/13/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Nuevo</strong>
-      <div class="article-nav-title">
-        
-          下午两点过五分到两点半的树阴
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/10/11/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/04/30/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Viejo</strong>
-      <div class="article-nav-title">这个博客怎么搭建的</div>
+      <div class="article-nav-title">载具系统</div>
     </a>
   
 </nav>
@@ -167,7 +165,7 @@
         repo: 'page-comments',
         owner: 'radnd',
         admin: ['radnd'],
-        id: 'https://example.com/2020/10/12/',
+        id: 'https://example.com/2021/05/04/',
         distractionFreeMode: false
     }).render('gitalk-container')
 </script>
